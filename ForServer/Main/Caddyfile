@@ -1,0 +1,37 @@
+# Caddyfile — TLS reverse-proxy для всего Mavix-стека.
+# Сертификат Let's Encrypt получается автоматически на основе домена.
+# Активируется, если в docker-compose.yaml раскомментирован сервис caddy.
+#
+# До того как раскомментировать caddy:
+# 1. Домен drone-mavix.ru должен резолвиться в IP этого сервера (A-запись).
+# 2. На VPS должны быть открыты 80 (для HTTP-01 challenge) и 443 (HTTPS).
+# 3. После старта Caddy сам получит и обновит сертификат.
+
+drone-mavix.ru {
+    # Email для уведомлений Let's Encrypt о просрочке сертификата.
+    tls aurunchill@yandex.ru
+
+    # API сервера + WebSocket + FastAPI auto-docs (Swagger UI, ReDoc,
+    # raw OpenAPI). /docs живёт на корне FastAPI, не под /api — поэтому
+    # явно перечисляем эти пути в одном matcher.
+    @apiPaths path /api/* /ws/* /docs* /redoc* /openapi.json
+    handle @apiPaths {
+        reverse_proxy app:8000
+    }
+
+    # Всё остальное — на статический фронт.
+    handle {
+        reverse_proxy web:3001
+    }
+
+    encode gzip
+    log {
+        output stdout
+        format console
+    }
+}
+
+# Опционально — редирект www -> apex.
+www.drone-mavix.ru {
+    redir https://drone-mavix.ru{uri} permanent
+}
