@@ -544,8 +544,8 @@ data-channel** дрон↔оператор поверх WebRTC (см. §6.5), н
 | **MavixServer** | rename users→admins, схема (operators/deliveries), operator-JWT, CRUD операторов, `/drones/enroll` (provisioning-токен), builds per-admin, `GET /drones`, доставки (REST state-machine + атомарный accept), WS operator-`/ws/gcs` + `/ws/admin` + нотификатор | 339 passed (2 ws-disconnect — флейк TestClient) |
 | **MavixBoard** | enroll-at-startup (ADMIN_ID+ENROLLMENT_TOKEN), выделенный telemetry-канал (GPS/heading CRSF+MAVLink) | 298 passed |
 | **MavixWeb** | админ-панель (операторы/дроны/доставки + карта Leaflet + WS-уведомления), публичный desktop-download, ребрендинг под доставку | 40 passed |
-| **MavixDesktop-UI** | operator login, убран список дронов, уведомления-заявки + accept, настройки-кнопка, карта Leaflet+rotate (QWebEngineView, telemetry-канал), сброс груза (CH8 + mark_delivered) | 140 non-GUI passed |
+| **MavixDesktop-UI** | operator login, убран список дронов, уведомления-заявки + accept, настройки-кнопка, карта Leaflet+rotate (QWebEngineView, telemetry-канал), сброс груза (CH8 + mark_delivered) | 236 passed (полный, с libGL) |
 
-**Известные пре-существующие падения (дрейф эталонных тестов / флейки, не регрессии):** server — 2 ws-disconnect (ограничение TestClient); desktop — ~7 `test_coordinator` (ждут старой teardown/reconnect-семантики) + 2 ping (UnicodeDecodeError).
+**Все тесты зелёные:** MavixServer 341 passed (флейк ws-disconnect стабилизирован `pytest-rerunfailures`), MavixBoard 298, MavixWeb 40, MavixDesktop-UI 236 (GUI прогнан с libGL). Устаревшие/orphan-тесты эталона приведены под новый поток или удалены. Итого ~915 тестов, 0 падений.
 
 **Не проверено runtime в этой среде:** desktop GUI/карта/видео — в песочнице нет `libGL` и `sudo`; проверены `ruff` + `py_compile` + не-GUI логика. Требуется среда с дисплеем/libGL.
