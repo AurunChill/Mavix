@@ -39,7 +39,7 @@
         │  REST: auth(admin/operator) · operators · deliveries · drones        │
         │  enroll(board) · builds · ice-servers                                │
         │  WS:  /ws/drone  /ws/gcs(operator)  /ws/admin                        │
-        │  DB:  users(admins) · operators · operator_drones · drones · deliveries│
+        │  DB:  admins · operators · drones · deliveries                       │
         └───▲─────────────────▲───────────────────▲──────────────────▲────────┘
             │ REST/WS          │ enroll+WS         │ REST/WS          │ WebRTC signaling
             │                  │                   │                  │
@@ -54,7 +54,7 @@
 **Сценарий доставки (happy path):**
 
 1. Админ регистрируется/логинится в MavixWeb.
-2. Админ скачивает **один** board-`tar.gz` (в нём только `USER_ID` + `ENROLLMENT_TOKEN`, без `DRONE_ID`).
+2. Админ скачивает **один** board-`tar.gz` (в нём только `ADMIN_ID` + `ENROLLMENT_TOKEN`, без `DRONE_ID`).
 3. Ставит ПО на N своих дронов. Каждый дрон при **первом запуске** сам генерирует
    `DRONE_ID`, получает имя, регистрируется на сервере и привязывается к админу.
 4. Админ создаёт оператора (ФИО, город, …) → система генерирует `username`+`password`.
@@ -139,54 +139,99 @@ git push -u origin delivery_control
 
 ## 5. Модель данных (MavixServer, PostgreSQL + Alembic)
 
-Существующее: `users` (станут **администраторами**), `drones`.
+Существующее: `users` (**переименовываем в `admins`**, `user_id`→`admin_id` везде), `drones`.
 
-### Изменения существующих таблиц
+### `admins` (бывш. `users`)
 
-`users` (= администраторы):
-- `+ enrollment_token VARCHAR(64) UNIQUE NOT NULL` — секрет провижининга дронов, вшивается
-  в board-tarball. Генерируется при регистрации, ротируемый (можно добавить endpoint позже — YAGNI).
-- (роль не вводим отдельной колонкой: web-логин = только админ; оператор живёт в своей таблице.)
+| Поле | Тип | Ключ / default | Назначение |
+|---|---|---|---|
+| `admin_id` | VARCHAR(32) | PK, `generate(32)` | id админа (бывш. `user_id`) |
+| `email` | VARCHAR(254) | UNIQUE, NOT NULL | логин в web |
+| `password` | VARCHAR(256) | NOT NULL | bcrypt-хеш |
+| `full_name` | VARCHAR(254) | NOT NULL | ФИО ← **новое** |
+| `enrollment_token` | VARCHAR(64) | UNIQUE, `generate(64)` | секрет провижининга дронов ← **новое**; генерится сразу при регистрации, вшивается в board-tarball |
+| `created_at`/`updated_at` | TIMESTAMPTZ | `now()` | |
 
-`drones`:
-- `+ name VARCHAR(64)` — человекочитаемое имя из двух слов (генерится сервером).
-- `+ enrolled_at TIMESTAMPTZ NULL` — момент саморегистрации.
-- `drone_token` остаётся (выдаётся при enroll, используется для `/ws/drone`).
+### `drones` (изменения)
 
-### Новые таблицы
+| Поле | Тип | Изменение |
+|---|---|---|
+| `drone_id` | VARCHAR(64) PK | теперь генерит board при enroll (раньше — сервер при скачивании) |
+| `admin_id` | VARCHAR(32) FK→admins, ON DELETE CASCADE | бывш. `user_id` |
+| `drone_token` | VARCHAR(64) UNIQUE | без изменений (выдаётся при enroll, для `/ws/drone`) |
+| `name` | VARCHAR(64) | ← **новое** — имя из двух слов (генерит сервер) |
+| `enrolled_at` | TIMESTAMPTZ NULL | ← **новое** — момент саморегистрации |
+| `created_at`/`last_seen_at` | TIMESTAMPTZ | без изменений |
 
-`operators`:
+### `operators` (новая)
+
 | Поле | Тип | Назначение |
 |---|---|---|
 | `operator_id` | VARCHAR(32) PK | id оператора |
-| `admin_id` | VARCHAR(32) FK→users | владелец-администратор |
-| `username` | VARCHAR(64) UNIQUE | автогенерируемый логин |
+| `admin_id` | VARCHAR(32) FK→admins, ON DELETE CASCADE | владелец-администратор |
+| `username` | VARCHAR(64) UNIQUE | автогенерируемый логин в desktop |
 | `password` | VARCHAR(256) | bcrypt-хеш автогенерируемого пароля |
 | `full_name` | VARCHAR(254) | ФИО |
-| `city` | VARCHAR(128) NULL | город |
-| `is_active` | BOOL | активен/заблокирован |
+| `passport` | VARCHAR(32) | паспортные данные |
+| `address` | VARCHAR(512) | адрес (вместо города) |
+| `is_active` | BOOL, default TRUE | мягкое отключение входа без удаления (best practice) |
 | `created_at`/`updated_at` | TIMESTAMPTZ | |
 
-> Закрепление дронов за операторами **не делаем** (решение §10-А): таблицы
-> `operator_drones` нет. Оператор принадлежит админу (`admin_id`); заявку видят все
-> операторы этого админа.
+> Закрепление дронов за операторами **не делаем** (§10-А): таблицы `operator_drones` нет.
+> Оператор принадлежит админу (`admin_id`); заявку видят все операторы этого админа.
+> Дрон↔оператор связь — только на уровне `deliveries` (в один момент дроном рулит один
+> оператор — гарантирует `ConnectionRegistry`; в разное время — могут разные).
 
-`deliveries`:
+### `deliveries` (новая = журнал)
+
 | Поле | Тип | Назначение |
 |---|---|---|
 | `delivery_id` | VARCHAR(32) PK | |
-| `admin_id` | VARCHAR(32) FK→users | кто создал |
-| `drone_id` | VARCHAR(64) FK→drones | назначенный дрон |
-| `operator_id` | VARCHAR(32) FK→operators NULL | кто принял (до accept — NULL) |
-| `status` | VARCHAR(16) | `created`→`offered`→`accepted`→`in_flight`→`delivered` / `cancelled` |
-| `dest_address` | VARCHAR(512) NULL | адрес текстом |
-| `dest_lat`/`dest_lon` | DOUBLE NULL | координаты (с карты/ввода) |
-| `cargo_description` | VARCHAR(512) NULL | **необязательное** (гос. структуры могут не указывать) |
-| `created_at`/`offered_at`/`accepted_at`/`delivered_at`/`cancelled_at` | TIMESTAMPTZ NULL | таймлайн |
+| `admin_id` | VARCHAR(32) FK→admins, ON DELETE CASCADE | кто создал |
+| `drone_id` | VARCHAR(64) FK→drones, ON DELETE SET NULL | назначенный дрон (ссылка) |
+| `operator_id` | VARCHAR(32) FK→operators NULL, ON DELETE SET NULL | кто принял (NULL до accept и после удаления оператора) |
+| `drone_name` | VARCHAR(64) NULL | **снимок** имени дрона (переживает удаление дрона) |
+| `operator_name` | VARCHAR(254) NULL | **снимок** ФИО оператора (переживает удаление) |
+| `operator_passport` | VARCHAR(32) NULL | **снимок** паспорта оператора (переживает удаление) |
+| `status` | VARCHAR(16) | значение из `DeliveryStatus` (enum) |
+| `departure_address` | VARCHAR(512) NULL | откуда — адрес |
+| `departure_lat`/`departure_lon` | DOUBLE NULL | откуда — координаты |
+| `destination_address` | VARCHAR(512) NULL | куда — адрес |
+| `destination_lat`/`destination_lon` | DOUBLE NULL | куда — координаты |
+| `cargo_description` | VARCHAR(512) NULL | что везём — **необязательное** (гос. структуры могут не указывать) |
+| `created_at`/`accepted_at`/`delivered_at`/`cancelled_at` | TIMESTAMPTZ NULL | таймлайн |
 
-**Миграции Alembic** (по одной на изменение, в порядке): `add_enrollment_token_to_users`
-→ `add_name_enrolled_to_drones` → `create_operators` →
-`create_deliveries`. Тесты на SQLite, прод — Postgres (как сейчас).
+Снимки `drone_name`/`operator_name`/`operator_passport` заполняются при создании заявки
+(дрон) и при принятии (оператор), чтобы журнал оставался полным даже после удаления
+дрона/оператора (`SET NULL` рвёт ссылку, но снимок и `cargo_description` остаются).
+
+### `DeliveryStatus` (StrEnum, в `models/delivery.py`)
+
+```python
+class DeliveryStatus(StrEnum):
+    OFFERED = 'offered'        # создана и разослана операторам админа
+    ACCEPTED = 'accepted'      # оператор принял (гонка-такси)
+    IN_FLIGHT = 'in_flight'    # оператор подключился к дрону, летит
+    DELIVERED = 'delivered'    # груз сброшен
+    CANCELLED = 'cancelled'    # отменена админом
+```
+
+### Связи и каскады (сводка)
+
+```
+admins 1──N drones       ON DELETE CASCADE   (владение)
+admins 1──N operators     ON DELETE CASCADE   (владение)
+admins 1──N deliveries    ON DELETE CASCADE   (владение)
+drones 1──N deliveries    ON DELETE SET NULL  + снимок drone_name                  (журнал живёт)
+operators 1─N deliveries  ON DELETE SET NULL  + снимки operator_name/_passport     (журнал живёт)
+```
+
+### Миграции Alembic (по одной на изменение, в порядке)
+
+`rename_users_to_admins` (rename_table + rename `user_id`→`admin_id` в users и drones,
+переименование FK) → `add_full_name_enrollment_token_to_admins` →
+`add_name_enrolled_to_drones` → `create_operators` → `create_deliveries`.
+Тесты на SQLite, прод — Postgres (как сейчас).
 
 ---
 
@@ -202,8 +247,8 @@ headless-устройство, ему нужен **долгоживущий ст
 общий для админа секрет, устройство им подтверждает право зарегистрироваться, сервер выдаёт
 устройству его персональный долговременный токен.
 
-> Только `USER_ID` вшивать **небезопасно**: `user_id` не секрет — зная его, кто угодно
-> привязал бы чужие дроны к админу. Поэтому в tarball кладём `USER_ID` **и**
+> Только `ADMIN_ID` вшивать **небезопасно**: `admin_id` не секрет — зная его, кто угодно
+> привязал бы чужие дроны к админу. Поэтому в tarball кладём `ADMIN_ID` **и**
 > `ENROLLMENT_TOKEN` (секрет админа). Это минимальное безопасное решение и оно остаётся
 > простым (KISS): один статический токен, без OAuth-плясок.
 
@@ -214,11 +259,11 @@ board (первый запуск, в .env нет DRONE_ID):
   drone_id = uuid4().hex                       # 32 hex, генерим локально
   POST /api/v1/drones/enroll
        Authorization: Enroll <ENROLLMENT_TOKEN>
-       body: { user_id, drone_id }
+       body: { admin_id, drone_id }
 server:
-  validate ENROLLMENT_TOKEN ↔ users.enrollment_token ↔ user_id
+  validate ENROLLMENT_TOKEN ↔ admins.enrollment_token ↔ admin_id
   name = two_words()                           # рандом из 2×~1000 слов
-  drone = create_or_get(drone_id, user_id, name, drone_token=gen())   # идемпотентно по drone_id
+  drone = create_or_get(drone_id, admin_id, name, drone_token=gen())   # идемпотентно по drone_id
   → 201 { drone_id, drone_token, name }
 board:
   записать DRONE_ID, DRONE_TOKEN, DRONE_NAME в .env (preset.env)
@@ -236,7 +281,7 @@ board:
 `services/drone.py`, `services/build.py`, `models/user.py`, `core/security.py` (генерация
 токена), новый `services/naming.py` (два-словное имя);
 `MavixBoard/src/mavixboard/__main__.py` + `core/config.py` (enroll-at-startup, запись .env);
-`MavixServer/build-templates/board/preset.env.template` (плейсхолдеры `USER_ID`,
+`MavixServer/build-templates/board/preset.env.template` (плейсхолдеры `ADMIN_ID`,
 `ENROLLMENT_TOKEN`, без `DRONE_ID`).
 
 ### 6.2 Аутентификация оператора
@@ -341,7 +386,8 @@ alt, heading(yaw)` и шлём ~2–5 Гц JSON `{type:'telemetry', lat, lon, he
 
 ### 7.1 MavixServer (бэкенд) — пункты 1,3,4,5,7,8
 
-1. Модели + миграции: `enrollment_token` в users; `name`,`enrolled_at` в drones; новые
+1. Модели + миграции: rename `users`→`admins` (+`user_id`→`admin_id`); `full_name`+
+   `enrollment_token` в admins; `name`,`enrolled_at` в drones; новые
    `operators`, `operator_drones`, `deliveries` (§5).
 2. `core/security.py`: генерация enrollment-токена; operator-JWT (`role` в payload),
    декодер с ролью. `services/naming.py`: два-словное имя (списки `~1000` прил. + `~1000`
@@ -357,7 +403,7 @@ alt, heading(yaw)` и шлём ~2–5 Гц JSON `{type:'telemetry', lat, lon, he
    `services/delivery.py` (state machine, §6.3), `repositories/delivery.py`.
 7. `ws/`: новый `/ws/admin` + admin_handler; в `gcs_handler` — сообщения доставки;
    `registry.py` — индексы admin/operator; рассылки в `relay.py`/новом `notifier.py`.
-8. `services/build.py`: tarball без предрегистрации дрона, плейсхолдеры `USER_ID`+
+8. `services/build.py`: tarball без предрегистрации дрона, плейсхолдеры `ADMIN_ID`+
    `ENROLLMENT_TOKEN`; **убрать desktop из авторизованной раздачи** (desktop станет
    публичным, см. web). Board-сборка — один артефакт на админа.
 9. Тесты под всё новое (REST + WS + services), SQLite.
@@ -416,7 +462,7 @@ alt, heading(yaw)` и шлём ~2–5 Гц JSON `{type:'telemetry', lat, lon, he
 - **Phase 1 — Server: данные и auth.** Миграции (operators/operator_drones/deliveries,
   enrollment_token, drone.name), operator-JWT, CRUD операторов + назначение дронов.
 - **Phase 2 — Server: enroll + builds.** `/drones/enroll`, генерация имени, перестройка
-  builds (USER_ID+ENROLLMENT_TOKEN, один артефакт; desktop → публичный).
+  builds (ADMIN_ID+ENROLLMENT_TOKEN, один артефакт; desktop → публичный).
 - **Phase 3 — Board: саморегистрация.** Enroll-at-startup + запись .env. *Зависит от Phase 2.*
 - **Phase 4 — Server: доставки + WS.** `DeliveryService` (state machine), эндпоинты,
   `/ws/admin`, уведомления, рассылка offer/accept (такси-гонка).
@@ -452,7 +498,7 @@ alt, heading(yaw)` и шлём ~2–5 Гц JSON `{type:'telemetry', lat, lon, he
 Заявку видят **все операторы, закреплённые за администратором** (по `admin_id`). Таблицу
 `operator_drones` и эндпоинт назначения убрали.
 
-**Б. Безопасность enroll — РЕШЕНО.** В tarball вшиваем `USER_ID` + `ENROLLMENT_TOKEN`
+**Б. Безопасность enroll — РЕШЕНО.** В tarball вшиваем `ADMIN_ID` + `ENROLLMENT_TOKEN`
 (см. §6.1).
 
 **В. Телеметрия и трекинг — РЕШЕНО.** Телеметрия (GPS/heading) ходит **по выделенному
@@ -486,3 +532,20 @@ data-channel** дрон↔оператор поверх WebRTC (см. §6.5), н
 ---
 
 *Конец плана. После подтверждения вопросов §10 начинаем с Phase 0 (git) → Phase 1 (server).*
+
+---
+
+## 12. Статус выполнения (2026-06-06)
+
+Все фазы плана реализованы в ветке `delivery_control` всех репозиториев (запушено).
+
+| Репозиторий | Сделано | Тесты |
+|---|---|---|
+| **MavixServer** | rename users→admins, схема (operators/deliveries), operator-JWT, CRUD операторов, `/drones/enroll` (provisioning-токен), builds per-admin, `GET /drones`, доставки (REST state-machine + атомарный accept), WS operator-`/ws/gcs` + `/ws/admin` + нотификатор | 339 passed (2 ws-disconnect — флейк TestClient) |
+| **MavixBoard** | enroll-at-startup (ADMIN_ID+ENROLLMENT_TOKEN), выделенный telemetry-канал (GPS/heading CRSF+MAVLink) | 298 passed |
+| **MavixWeb** | админ-панель (операторы/дроны/доставки + карта Leaflet + WS-уведомления), публичный desktop-download, ребрендинг под доставку | 40 passed |
+| **MavixDesktop-UI** | operator login, убран список дронов, уведомления-заявки + accept, настройки-кнопка, карта Leaflet+rotate (QWebEngineView, telemetry-канал), сброс груза (CH8 + mark_delivered) | 140 non-GUI passed |
+
+**Известные пре-существующие падения (дрейф эталонных тестов / флейки, не регрессии):** server — 2 ws-disconnect (ограничение TestClient); desktop — ~7 `test_coordinator` (ждут старой teardown/reconnect-семантики) + 2 ping (UnicodeDecodeError).
+
+**Не проверено runtime в этой среде:** desktop GUI/карта/видео — в песочнице нет `libGL` и `sudo`; проверены `ruff` + `py_compile` + не-GUI логика. Требуется среда с дисплеем/libGL.
