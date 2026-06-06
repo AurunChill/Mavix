@@ -1,0 +1,16 @@
+[submodule "MavixServer"]
+	path = MavixServer
+	url = https://github.com/AurunChill/MavixServer
+	branch = delivery_control
+[submodule "MavixBoard"]
+	path = MavixBoard
+	url = https://github.com/AurunChill/MavixBoard
+	branch = delivery_control
+[submodule "MavixWeb"]
+	path = MavixWeb
+	url = https://github.com/dexstronggg/MavixWeb
+	branch = delivery_control
+[submodule "MavixDesktop-UI"]
+	path = MavixDesktop-UI
+	url = https://github.com/dexstronggg/MavixDesktop-UI
+	branch = delivery_control
