@@ -27,19 +27,19 @@
 <rect x="560.0" y="905.0" width="300.0" height="80.0" stroke="#000" fill="none" stroke-width="1.2"/>
 <text x="710.0" y="941.0" text-anchor="middle" font-size="16" font-weight="bold">PostgreSQL</text>
 <text x="710.0" y="961.0" text-anchor="middle" font-size="14" font-style="italic">(контейнер БД)</text>
-<polyline points="560.0,210.0 610.0,210.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="560.0,210.0 601.0,210.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="585.0" y="200.0" text-anchor="middle" font-size="13" >JWT</text>
-<polyline points="870.0,210.0 820.0,210.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="870.0,210.0 829.0,210.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="845.0" y="200.0" text-anchor="middle" font-size="13" >JWT</text>
-<polyline points="370.0,270.0 370.0,405.0 440.0,405.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="370.0,270.0 370.0,405.0 431.0,405.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="372.0" y="330.0" text-anchor="start" font-size="13" >вызов сервисов</text>
-<polyline points="1085.0,270.0 1085.0,405.0 960.0,405.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="1085.0,270.0 1085.0,405.0 969.0,405.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="1080.0" y="330.0" text-anchor="end" font-size="13" >сценарии заявок / сессий</text>
-<polyline points="700.0,460.0 700.0,510.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="700.0,460.0 700.0,501.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="712.0" y="492.0" text-anchor="start" font-size="13" >запросы</text>
-<polyline points="700.0,605.0 700.0,650.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="700.0,605.0 700.0,641.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="712.0" y="635.0" text-anchor="start" font-size="13" >ORM-объекты</text>
-<polyline points="700.0,740.0 700.0,905.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="700.0,740.0 700.0,896.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="712.0" y="830.0" text-anchor="start" font-size="13" >SQL (asyncpg)</text>
 <text x="750.0" y="1038" text-anchor="middle" font-style="italic" font-size="17">Рисунок 4 – Диаграмма компонентов (C4 Level 3) контейнера MavixServer</text>
 </svg>

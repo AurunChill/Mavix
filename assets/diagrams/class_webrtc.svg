@@ -63,15 +63,15 @@
 <text x="1049.0" y="862.0" text-anchor="start" font-size="12.5" >+ config · telemetry</text>
 <line x1="1040.0" y1="868.0" x2="1420.0" y2="868.0" stroke="#000" stroke-width="1.0"/>
 <text x="1049.0" y="882.0" text-anchor="start" font-size="12.5" >+ close()</text>
-<polyline points="765.0,298.0 765.0,470.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="765.0,298.0 765.0,461.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <polygon points="756,298 765,307 765,316 774,307" fill="#000" stroke="#000"/>
-<polyline points="970.0,175.0 1120.0,175.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="970.0,175.0 1111.0,175.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <polygon points="970,166 979,175 988,175 979,184" fill="#000" stroke="#000"/>
-<polyline points="560.0,200.0 440.0,200.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="560.0,200.0 449.0,200.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <text x="500.0" y="192.0" text-anchor="middle" font-size="12" >fc_service</text>
-<polyline points="645.0,638.0 645.0,760.0 320.0,760.0 320.0,800.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="645.0,638.0 645.0,760.0 320.0,760.0 320.0,791.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <polygon points="636,638 645,647 645,656 654,647" fill="#000" stroke="#000"/>
-<polyline points="905.0,638.0 905.0,760.0 1230.0,760.0 1230.0,800.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="905.0,638.0 905.0,760.0 1230.0,760.0 1230.0,791.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
 <polygon points="896,638 905,647 905,656 914,647" fill="#000" stroke="#000"/>
 <text x="780.0" y="1058" text-anchor="middle" font-style="italic" font-size="17">Рисунок 8 – Диаграмма классов WebRTC-слоя MavixBoard</text>
 </svg>
