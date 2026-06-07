@@ -11,13 +11,16 @@ import types
 
 FS_TITLE = 17
 FS_ROW = 14
+FS_HEAD = 12
 ROW_H = 24
 TITLE_H = 28
+HEADER_H = 23
 PAD = 10
 
-# Колонки таблицы: атрибут / тип / ограничение.
-COL = [185, 120, 70]
+# Колонки таблицы: атрибут / тип / ограничения (последняя шире — длинные NN/FK).
+COL = [185, 120, 100]
 TABLE_W = sum(COL)
+COL_HEAD = ['Атрибут', 'Тип', 'Ограничения']
 
 
 def _esc(s: str) -> str:
@@ -26,23 +29,31 @@ def _esc(s: str) -> str:
 
 def table(x: float, y: float, name: str, rows: list[tuple[str, str, str]]) -> tuple[str, dict]:
     """Рисует таблицу. Возвращает (svg, geom) — geom с краями для связей."""
-    h = TITLE_H + ROW_H * len(rows)
+    h = TITLE_H + HEADER_H + ROW_H * len(rows)
     parts = []
     # рамка
     parts.append(f'<rect x="{x}" y="{y}" width="{TABLE_W}" height="{h}" '
                  f'stroke="#000" fill="none" stroke-width="1.2"/>')
-    # заголовок (italic, по центру)
+    # заголовок-имя таблицы (italic, по центру)
     parts.append(f'<text x="{x + TABLE_W / 2:.1f}" y="{y + 19}" text-anchor="middle" '
                  f'font-style="italic" font-size="{FS_TITLE}" font-weight="bold">{_esc(name)}</text>')
     parts.append(f'<line x1="{x}" y1="{y + TITLE_H}" x2="{x + TABLE_W}" y2="{y + TITLE_H}" '
                  f'stroke="#000" stroke-width="1.1"/>')
-    # вертикальные разделители колонок
     cx1 = x + COL[0]
     cx2 = x + COL[0] + COL[1]
+    # строка-шапка с названиями столбцов (bold, по центру каждой колонки)
+    centers = [x + COL[0] / 2, cx1 + COL[1] / 2, cx2 + COL[2] / 2]
+    hy = y + TITLE_H + 16
+    for c, lbl in zip(centers, COL_HEAD):
+        parts.append(f'<text x="{c:.1f}" y="{hy}" text-anchor="middle" '
+                     f'font-size="{FS_HEAD}" font-weight="bold">{_esc(lbl)}</text>')
+    parts.append(f'<line x1="{x}" y1="{y + TITLE_H + HEADER_H}" x2="{x + TABLE_W}" y2="{y + TITLE_H + HEADER_H}" '
+                 f'stroke="#000" stroke-width="0.9"/>')
+    # вертикальные разделители колонок (через шапку и тело)
     parts.append(f'<line x1="{cx1}" y1="{y + TITLE_H}" x2="{cx1}" y2="{y + h}" stroke="#000" stroke-width="0.7"/>')
     parts.append(f'<line x1="{cx2}" y1="{y + TITLE_H}" x2="{cx2}" y2="{y + h}" stroke="#000" stroke-width="0.7"/>')
-    # строки
-    ry = y + TITLE_H
+    # строки данных
+    ry = y + TITLE_H + HEADER_H
     for attr, typ, con in rows:
         ty = ry + 16
         parts.append(f'<text x="{x + 8}" y="{ty}" font-size="{FS_ROW}">{_esc(attr)}</text>')
@@ -144,12 +155,12 @@ deliveries = [
 ]
 
 # ---- раскладка ----------------------------------------------------------------
-W, H = 1260, 1020
+W, H = 1320, 1050
 body = []
-t_op, g_op = table(30, 70, 'operators', operators)
-t_ad, g_ad = table(445, 70, 'admins', admins)
-t_dr, g_dr = table(855, 70, 'drones', drones)
-t_de, g_de = table(445, 470, 'deliveries', deliveries)
+t_op, g_op = table(20, 70, 'operators', operators)
+t_ad, g_ad = table(460, 70, 'admins', admins)
+t_dr, g_dr = table(900, 70, 'drones', drones)
+t_de, g_de = table(460, 470, 'deliveries', deliveries)
 body += [t_op, t_ad, t_dr, t_de]
 
 rels = []
