@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="760" viewBox="0 0 1540 760" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1540" height="760" fill="#fff"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#000"/></marker></defs>
+<rect x="95.0" y="70.0" width="230.0" height="56.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="210.0" y="94.0" text-anchor="middle" font-size="15" font-weight="bold">Оператор</text>
+<text x="210.0" y="112.0" text-anchor="middle" font-size="12" font-style="italic">(MavixDesktop)</text>
+<line x1="210.0" y1="126.0" x2="210.0" y2="660.0" stroke="#000" stroke-width="0.8" stroke-dasharray="6 5"/>
+<rect x="525.0" y="70.0" width="230.0" height="56.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="640.0" y="103.0" text-anchor="middle" font-size="15" font-weight="bold">MavixServer</text>
+<line x1="640.0" y1="126.0" x2="640.0" y2="660.0" stroke="#000" stroke-width="0.8" stroke-dasharray="6 5"/>
+<rect x="905.0" y="70.0" width="230.0" height="56.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1020.0" y="103.0" text-anchor="middle" font-size="15" font-weight="bold">PostgreSQL</text>
+<line x1="1020.0" y1="126.0" x2="1020.0" y2="660.0" stroke="#000" stroke-width="0.8" stroke-dasharray="6 5"/>
+<rect x="1255.0" y="70.0" width="230.0" height="56.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1370.0" y="103.0" text-anchor="middle" font-size="15" font-weight="bold">MavixBoard</text>
+<line x1="1370.0" y1="126.0" x2="1370.0" y2="660.0" stroke="#000" stroke-width="0.8" stroke-dasharray="6 5"/>
+<polyline points="210.0,170.0 640.0,170.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<text x="425.0" y="160.0" text-anchor="middle" font-size="13" >1. POST /deliveries/{id}/accept (Bearer JWT)</text>
+<polyline points="640.0,258.0 1020.0,258.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<text x="830.0" y="230.0" text-anchor="middle" font-size="13" >2. UPDATE deliveries SET status='accepted'</text>
+<text x="830.0" y="248.0" text-anchor="middle" font-size="13" >WHERE status='offered' (атомарный захват)</text>
+<polyline points="1020.0,330.0 640.0,330.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5" marker-end="url(#open)"/>
+<text x="830.0" y="320.0" text-anchor="middle" font-size="13" >3. rowcount = 1 — заявка захвачена</text>
+<polyline points="640.0,400.0 210.0,400.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5" marker-end="url(#open)"/>
+<text x="425.0" y="390.0" text-anchor="middle" font-size="13" >4. 200 OK + delivery (status=accepted)</text>
+<polyline points="210.0,470.0 640.0,470.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<text x="425.0" y="460.0" text-anchor="middle" font-size="13" >5. WS: { type: 'connect', drone_id }</text>
+<polyline points="640.0,540.0 1370.0,540.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<text x="1005.0" y="530.0" text-anchor="middle" font-size="13" >6. WS: { type: 'connect', gcs_id }</text>
+<text x="640.0" y="615.0" text-anchor="middle" font-size="13" font-style="italic">Далее — установление WebRTC-сессии (см. рис. 10)</text>
+<text x="770.0" y="738" text-anchor="middle" font-style="italic" font-size="17">Рисунок 9 – Диаграмма последовательности: приём заявки и подключение к дрону</text>
+</svg>
