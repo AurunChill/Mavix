@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="1020" viewBox="0 0 1260 1020" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1260" height="1020" fill="#fff"/>
+<polyline points="445.0,130.0 405.0,130.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="457" y1="123" x2="457" y2="137" stroke="#000" stroke-width="1.0"/>
+<line x1="405" y1="130" x2="418" y2="122" stroke="#000" stroke-width="0.9"/><line x1="405" y1="130" x2="418" y2="130" stroke="#000" stroke-width="0.9"/><line x1="405" y1="130" x2="418" y2="138" stroke="#000" stroke-width="0.9"/>
+<polyline points="820.0,130.0 855.0,130.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="808" y1="123" x2="808" y2="137" stroke="#000" stroke-width="1.0"/>
+<line x1="855" y1="130" x2="842" y2="122" stroke="#000" stroke-width="0.9"/><line x1="855" y1="130" x2="842" y2="130" stroke="#000" stroke-width="0.9"/><line x1="855" y1="130" x2="842" y2="138" stroke="#000" stroke-width="0.9"/>
+<polyline points="632.5,266.0 632.5,470.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="625.5" y1="254" x2="639.5" y2="254" stroke="#000" stroke-width="1.0"/>
+<line x1="632.5" y1="470" x2="624.5" y2="457" stroke="#000" stroke-width="0.9"/><line x1="632.5" y1="470" x2="632.5" y2="457" stroke="#000" stroke-width="0.9"/><line x1="632.5" y1="470" x2="640.5" y2="457" stroke="#000" stroke-width="0.9"/>
+<polyline points="1042.5,266.0 1042.5,415.0 895.0,415.0 895.0,540.0 820.0,540.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="1035.5" y1="254" x2="1049.5" y2="254" stroke="#000" stroke-width="1.0"/>
+<line x1="820" y1="540" x2="807" y2="532" stroke="#000" stroke-width="0.9"/><line x1="820" y1="540" x2="807" y2="540" stroke="#000" stroke-width="0.9"/><line x1="820" y1="540" x2="807" y2="548" stroke="#000" stroke-width="0.9"/>
+<polyline points="217.5,338.0 217.5,445.0 370.0,445.0 370.0,600.0 445.0,600.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="210.5" y1="326" x2="224.5" y2="326" stroke="#000" stroke-width="1.0"/>
+<line x1="445" y1="600" x2="458" y2="592" stroke="#000" stroke-width="0.9"/><line x1="445" y1="600" x2="458" y2="600" stroke="#000" stroke-width="0.9"/><line x1="445" y1="600" x2="458" y2="608" stroke="#000" stroke-width="0.9"/>
+<rect x="30" y="70" width="375" height="268" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="217.5" y="89" text-anchor="middle" font-style="italic" font-size="17" font-weight="bold">operators</text>
+<line x1="30" y1="98" x2="405" y2="98" stroke="#000" stroke-width="1.1"/>
+<line x1="215" y1="98" x2="215" y2="338" stroke="#000" stroke-width="0.7"/>
+<line x1="335" y1="98" x2="335" y2="338" stroke="#000" stroke-width="0.7"/>
+<text x="38" y="114" font-size="14">operator_id</text>
+<text x="223" y="114" font-size="14" font-style="italic">varchar(32)</text>
+<text x="343" y="114" font-size="14">PK</text>
+<line x1="30" y1="122" x2="405" y2="122" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="138" font-size="14">admin_id</text>
+<text x="223" y="138" font-size="14" font-style="italic">varchar(32)</text>
+<text x="343" y="138" font-size="14">FK, NN</text>
+<line x1="30" y1="146" x2="405" y2="146" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="162" font-size="14">username</text>
+<text x="223" y="162" font-size="14" font-style="italic">varchar(64)</text>
+<text x="343" y="162" font-size="14">UQ, NN</text>
+<line x1="30" y1="170" x2="405" y2="170" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="186" font-size="14">password</text>
+<text x="223" y="186" font-size="14" font-style="italic">varchar(256)</text>
+<text x="343" y="186" font-size="14">NN</text>
+<line x1="30" y1="194" x2="405" y2="194" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="210" font-size="14">full_name</text>
+<text x="223" y="210" font-size="14" font-style="italic">varchar(254)</text>
+<text x="343" y="210" font-size="14">NN</text>
+<line x1="30" y1="218" x2="405" y2="218" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="234" font-size="14">passport</text>
+<text x="223" y="234" font-size="14" font-style="italic">varchar(32)</text>
+<text x="343" y="234" font-size="14">NN</text>
+<line x1="30" y1="242" x2="405" y2="242" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="258" font-size="14">address</text>
+<text x="223" y="258" font-size="14" font-style="italic">varchar(512)</text>
+<text x="343" y="258" font-size="14">NN</text>
+<line x1="30" y1="266" x2="405" y2="266" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="282" font-size="14">is_active</text>
+<text x="223" y="282" font-size="14" font-style="italic">bool</text>
+<text x="343" y="282" font-size="14">NN</text>
+<line x1="30" y1="290" x2="405" y2="290" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="306" font-size="14">created_at</text>
+<text x="223" y="306" font-size="14" font-style="italic">timestamptz</text>
+<text x="343" y="306" font-size="14">NN</text>
+<line x1="30" y1="314" x2="405" y2="314" stroke="#000" stroke-width="0.4"/>
+<text x="38" y="330" font-size="14">updated_at</text>
+<text x="223" y="330" font-size="14" font-style="italic">timestamptz</text>
+<text x="343" y="330" font-size="14">NN</text>
+<rect x="445" y="70" width="375" height="196" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="632.5" y="89" text-anchor="middle" font-style="italic" font-size="17" font-weight="bold">admins</text>
+<line x1="445" y1="98" x2="820" y2="98" stroke="#000" stroke-width="1.1"/>
+<line x1="630" y1="98" x2="630" y2="266" stroke="#000" stroke-width="0.7"/>
+<line x1="750" y1="98" x2="750" y2="266" stroke="#000" stroke-width="0.7"/>
+<text x="453" y="114" font-size="14">admin_id</text>
+<text x="638" y="114" font-size="14" font-style="italic">varchar(32)</text>
+<text x="758" y="114" font-size="14">PK</text>
+<line x1="445" y1="122" x2="820" y2="122" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="138" font-size="14">email</text>
+<text x="638" y="138" font-size="14" font-style="italic">varchar(254)</text>
+<text x="758" y="138" font-size="14">UQ, NN</text>
+<line x1="445" y1="146" x2="820" y2="146" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="162" font-size="14">password</text>
+<text x="638" y="162" font-size="14" font-style="italic">varchar(256)</text>
+<text x="758" y="162" font-size="14">NN</text>
+<line x1="445" y1="170" x2="820" y2="170" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="186" font-size="14">full_name</text>
+<text x="638" y="186" font-size="14" font-style="italic">varchar(254)</text>
+<text x="758" y="186" font-size="14">NULL</text>
+<line x1="445" y1="194" x2="820" y2="194" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="210" font-size="14">enrollment_token</text>
+<text x="638" y="210" font-size="14" font-style="italic">varchar(64)</text>
+<text x="758" y="210" font-size="14">UQ, NN</text>
+<line x1="445" y1="218" x2="820" y2="218" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="234" font-size="14">created_at</text>
+<text x="638" y="234" font-size="14" font-style="italic">timestamptz</text>
+<text x="758" y="234" font-size="14">NN</text>
+<line x1="445" y1="242" x2="820" y2="242" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="258" font-size="14">updated_at</text>
+<text x="638" y="258" font-size="14" font-style="italic">timestamptz</text>
+<text x="758" y="258" font-size="14">NN</text>
+<rect x="855" y="70" width="375" height="196" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1042.5" y="89" text-anchor="middle" font-style="italic" font-size="17" font-weight="bold">drones</text>
+<line x1="855" y1="98" x2="1230" y2="98" stroke="#000" stroke-width="1.1"/>
+<line x1="1040" y1="98" x2="1040" y2="266" stroke="#000" stroke-width="0.7"/>
+<line x1="1160" y1="98" x2="1160" y2="266" stroke="#000" stroke-width="0.7"/>
+<text x="863" y="114" font-size="14">drone_id</text>
+<text x="1048" y="114" font-size="14" font-style="italic">varchar(64)</text>
+<text x="1168" y="114" font-size="14">PK</text>
+<line x1="855" y1="122" x2="1230" y2="122" stroke="#000" stroke-width="0.4"/>
+<text x="863" y="138" font-size="14">admin_id</text>
+<text x="1048" y="138" font-size="14" font-style="italic">varchar(32)</text>
+<text x="1168" y="138" font-size="14">FK, NN</text>
+<line x1="855" y1="146" x2="1230" y2="146" stroke="#000" stroke-width="0.4"/>
+<text x="863" y="162" font-size="14">drone_token</text>
+<text x="1048" y="162" font-size="14" font-style="italic">varchar(64)</text>
+<text x="1168" y="162" font-size="14">UQ, NN</text>
+<line x1="855" y1="170" x2="1230" y2="170" stroke="#000" stroke-width="0.4"/>
+<text x="863" y="186" font-size="14">name</text>
+<text x="1048" y="186" font-size="14" font-style="italic">varchar(64)</text>
+<text x="1168" y="186" font-size="14">NULL</text>
+<line x1="855" y1="194" x2="1230" y2="194" stroke="#000" stroke-width="0.4"/>
+<text x="863" y="210" font-size="14">enrolled_at</text>
+<text x="1048" y="210" font-size="14" font-style="italic">timestamptz</text>
+<text x="1168" y="210" font-size="14">NULL</text>
+<line x1="855" y1="218" x2="1230" y2="218" stroke="#000" stroke-width="0.4"/>
+<text x="863" y="234" font-size="14">created_at</text>
+<text x="1048" y="234" font-size="14" font-style="italic">timestamptz</text>
+<text x="1168" y="234" font-size="14">NN</text>
+<line x1="855" y1="242" x2="1230" y2="242" stroke="#000" stroke-width="0.4"/>
+<text x="863" y="258" font-size="14">last_seen_at</text>
+<text x="1048" y="258" font-size="14" font-style="italic">timestamptz</text>
+<text x="1168" y="258" font-size="14">NULL</text>
+<rect x="445" y="470" width="375" height="484" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="632.5" y="489" text-anchor="middle" font-style="italic" font-size="17" font-weight="bold">deliveries</text>
+<line x1="445" y1="498" x2="820" y2="498" stroke="#000" stroke-width="1.1"/>
+<line x1="630" y1="498" x2="630" y2="954" stroke="#000" stroke-width="0.7"/>
+<line x1="750" y1="498" x2="750" y2="954" stroke="#000" stroke-width="0.7"/>
+<text x="453" y="514" font-size="14">delivery_id</text>
+<text x="638" y="514" font-size="14" font-style="italic">varchar(32)</text>
+<text x="758" y="514" font-size="14">PK</text>
+<line x1="445" y1="522" x2="820" y2="522" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="538" font-size="14">admin_id</text>
+<text x="638" y="538" font-size="14" font-style="italic">varchar(32)</text>
+<text x="758" y="538" font-size="14">FK, NN</text>
+<line x1="445" y1="546" x2="820" y2="546" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="562" font-size="14">drone_id</text>
+<text x="638" y="562" font-size="14" font-style="italic">varchar(64)</text>
+<text x="758" y="562" font-size="14">FK, NULL</text>
+<line x1="445" y1="570" x2="820" y2="570" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="586" font-size="14">operator_id</text>
+<text x="638" y="586" font-size="14" font-style="italic">varchar(32)</text>
+<text x="758" y="586" font-size="14">FK, NULL</text>
+<line x1="445" y1="594" x2="820" y2="594" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="610" font-size="14">drone_name</text>
+<text x="638" y="610" font-size="14" font-style="italic">varchar(64)</text>
+<text x="758" y="610" font-size="14">NULL</text>
+<line x1="445" y1="618" x2="820" y2="618" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="634" font-size="14">operator_name</text>
+<text x="638" y="634" font-size="14" font-style="italic">varchar(254)</text>
+<text x="758" y="634" font-size="14">NULL</text>
+<line x1="445" y1="642" x2="820" y2="642" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="658" font-size="14">operator_passport</text>
+<text x="638" y="658" font-size="14" font-style="italic">varchar(32)</text>
+<text x="758" y="658" font-size="14">NULL</text>
+<line x1="445" y1="666" x2="820" y2="666" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="682" font-size="14">status</text>
+<text x="638" y="682" font-size="14" font-style="italic">varchar(16)</text>
+<text x="758" y="682" font-size="14">NN</text>
+<line x1="445" y1="690" x2="820" y2="690" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="706" font-size="14">departure_address</text>
+<text x="638" y="706" font-size="14" font-style="italic">varchar(512)</text>
+<text x="758" y="706" font-size="14">NULL</text>
+<line x1="445" y1="714" x2="820" y2="714" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="730" font-size="14">departure_lat</text>
+<text x="638" y="730" font-size="14" font-style="italic">float</text>
+<text x="758" y="730" font-size="14">NULL</text>
+<line x1="445" y1="738" x2="820" y2="738" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="754" font-size="14">departure_lon</text>
+<text x="638" y="754" font-size="14" font-style="italic">float</text>
+<text x="758" y="754" font-size="14">NULL</text>
+<line x1="445" y1="762" x2="820" y2="762" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="778" font-size="14">destination_address</text>
+<text x="638" y="778" font-size="14" font-style="italic">varchar(512)</text>
+<text x="758" y="778" font-size="14">NULL</text>
+<line x1="445" y1="786" x2="820" y2="786" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="802" font-size="14">destination_lat</text>
+<text x="638" y="802" font-size="14" font-style="italic">float</text>
+<text x="758" y="802" font-size="14">NULL</text>
+<line x1="445" y1="810" x2="820" y2="810" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="826" font-size="14">destination_lon</text>
+<text x="638" y="826" font-size="14" font-style="italic">float</text>
+<text x="758" y="826" font-size="14">NULL</text>
+<line x1="445" y1="834" x2="820" y2="834" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="850" font-size="14">cargo_description</text>
+<text x="638" y="850" font-size="14" font-style="italic">varchar(512)</text>
+<text x="758" y="850" font-size="14">NULL</text>
+<line x1="445" y1="858" x2="820" y2="858" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="874" font-size="14">created_at</text>
+<text x="638" y="874" font-size="14" font-style="italic">timestamptz</text>
+<text x="758" y="874" font-size="14">NN</text>
+<line x1="445" y1="882" x2="820" y2="882" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="898" font-size="14">accepted_at</text>
+<text x="638" y="898" font-size="14" font-style="italic">timestamptz</text>
+<text x="758" y="898" font-size="14">NULL</text>
+<line x1="445" y1="906" x2="820" y2="906" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="922" font-size="14">delivered_at</text>
+<text x="638" y="922" font-size="14" font-style="italic">timestamptz</text>
+<text x="758" y="922" font-size="14">NULL</text>
+<line x1="445" y1="930" x2="820" y2="930" stroke="#000" stroke-width="0.4"/>
+<text x="453" y="946" font-size="14">cancelled_at</text>
+<text x="638" y="946" font-size="14" font-style="italic">timestamptz</text>
+<text x="758" y="946" font-size="14">NULL</text>
+<text x="630.0" y="998" text-anchor="middle" font-style="italic" font-size="17">Рисунок 1 – Логическая модель данных (ER-диаграмма) системы Mavix</text>
+</svg>
