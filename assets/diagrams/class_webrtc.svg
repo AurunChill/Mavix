@@ -63,20 +63,17 @@
 <text x="1049.0" y="862.0" text-anchor="start" font-size="12.5" >+ config · telemetry</text>
 <line x1="1040.0" y1="868.0" x2="1420.0" y2="868.0" stroke="#000" stroke-width="1.0"/>
 <text x="1049.0" y="882.0" text-anchor="start" font-size="12.5" >+ close()</text>
-<polyline points="765.0,298.0 765.0,460.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="765.0,460.0 760.0,448.0 770.0,448.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<polygon points="756,298 765,307 765,316 774,307" fill="#000" stroke="#000"/>
-<polyline points="970.0,175.0 1110.0,175.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="1110.0,175.0 1098.0,180.0 1098.0,170.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<polygon points="970,166 979,175 988,175 979,184" fill="#000" stroke="#000"/>
-<polyline points="560.0,200.0 450.0,200.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="450.0,200.0 462.0,195.0 462.0,205.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="765.0,298.0 765.0,470.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="765.0,298.0 759.0,302.5 765.0,307.0 771.0,302.5" fill="#000" stroke="#000" stroke-width="1.0"/>
+<polyline points="970.0,175.0 1120.0,175.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="970.0,175.0 974.5,181.0 979.0,175.0 974.5,169.0" fill="#000" stroke="#000" stroke-width="1.0"/>
+<polyline points="560.0,200.0 454.0,200.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="466.0" y1="195.0" x2="454.0" y2="200.0" stroke="#000" stroke-width="0.9"/>
+<line x1="466.0" y1="205.0" x2="454.0" y2="200.0" stroke="#000" stroke-width="0.9"/>
 <text x="500.0" y="192.0" text-anchor="middle" font-size="12" >fc_service</text>
-<polyline points="645.0,638.0 645.0,760.0 320.0,760.0 320.0,790.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="320.0,790.0 315.0,778.0 325.0,778.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<polygon points="636,638 645,647 645,656 654,647" fill="#000" stroke="#000"/>
-<polyline points="905.0,638.0 905.0,760.0 1230.0,760.0 1230.0,790.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="1230.0,790.0 1225.0,778.0 1235.0,778.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<polygon points="896,638 905,647 905,656 914,647" fill="#000" stroke="#000"/>
+<polyline points="645.0,638.0 645.0,760.0 320.0,760.0 320.0,800.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="645.0,638.0 639.0,642.5 645.0,647.0 651.0,642.5" fill="#000" stroke="#000" stroke-width="1.0"/>
+<polyline points="905.0,638.0 905.0,760.0 1230.0,760.0 1230.0,800.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="905.0,638.0 899.0,642.5 905.0,647.0 911.0,642.5" fill="#000" stroke="#000" stroke-width="1.0"/>
 <text x="780.0" y="1058" text-anchor="middle" font-style="italic" font-size="17">Рисунок 8 – Диаграмма классов WebRTC-слоя MavixBoard</text>
 </svg>
