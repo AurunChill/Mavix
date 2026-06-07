@@ -58,24 +58,31 @@ def table(x: float, y: float, name: str, rows: list[tuple[str, str, str]]) -> tu
 
 
 def crow_one(px: float, py: float, dx: int, dy: int) -> str:
-    """Метка «1» — перпендикулярная чёрточка поперёк линии у родителя."""
+    """Метка «1» — поперечная чёрточка на линии СНАРУЖИ таблицы.
+
+    (dx, dy) — направление линии НАРУЖУ от края таблицы. Чёрточка ставится
+    на 12 px вдоль этого направления (за пределами таблицы)."""
     if dx != 0:  # линия горизонтальна → чёрточка вертикальна
-        return f'<line x1="{px - dx * 12}" y1="{py - 7}" x2="{px - dx * 12}" y2="{py + 7}" stroke="#000" stroke-width="1.0"/>'
-    return f'<line x1="{px - 7}" y1="{py - dy * 12}" x2="{px + 7}" y2="{py - dy * 12}" stroke="#000" stroke-width="1.0"/>'
+        bx = px + dx * 12
+        return f'<line x1="{bx}" y1="{py - 7}" x2="{bx}" y2="{py + 7}" stroke="#000" stroke-width="1.0"/>'
+    by = py + dy * 12
+    return f'<line x1="{px - 7}" y1="{by}" x2="{px + 7}" y2="{by}" stroke="#000" stroke-width="1.0"/>'
 
 
 def crow_many(px: float, py: float, dx: int, dy: int) -> str:
-    """Метка «N» — три «лапки» у ребёнка (вершина в точке входа)."""
+    """Метка «N» — три «лапки», вершина на краю таблицы, веер НАРУЖУ.
+
+    (dx, dy) — направление НАРУЖУ от края таблицы (туда же уходит линия)."""
     L = 13
-    if dx != 0:  # подходит по горизонтали
-        bx = px - dx * L
-        return (f'<line x1="{px}" y1="{py}" x2="{bx}" y2="{py - 8}" stroke="#000" stroke-width="0.9"/>'
-                f'<line x1="{px}" y1="{py}" x2="{bx}" y2="{py}" stroke="#000" stroke-width="0.9"/>'
-                f'<line x1="{px}" y1="{py}" x2="{bx}" y2="{py + 8}" stroke="#000" stroke-width="0.9"/>')
-    by = py - dy * L
-    return (f'<line x1="{px}" y1="{py}" x2="{px - 8}" y2="{by}" stroke="#000" stroke-width="0.9"/>'
-            f'<line x1="{px}" y1="{py}" x2="{px}" y2="{by}" stroke="#000" stroke-width="0.9"/>'
-            f'<line x1="{px}" y1="{py}" x2="{px + 8}" y2="{by}" stroke="#000" stroke-width="0.9"/>')
+    if dx != 0:  # веер по горизонтали наружу
+        ex = px + dx * L
+        return (f'<line x1="{px}" y1="{py}" x2="{ex}" y2="{py - 8}" stroke="#000" stroke-width="0.9"/>'
+                f'<line x1="{px}" y1="{py}" x2="{ex}" y2="{py}" stroke="#000" stroke-width="0.9"/>'
+                f'<line x1="{px}" y1="{py}" x2="{ex}" y2="{py + 8}" stroke="#000" stroke-width="0.9"/>')
+    ey = py + dy * L
+    return (f'<line x1="{px}" y1="{py}" x2="{px - 8}" y2="{ey}" stroke="#000" stroke-width="0.9"/>'
+            f'<line x1="{px}" y1="{py}" x2="{px}" y2="{ey}" stroke="#000" stroke-width="0.9"/>'
+            f'<line x1="{px}" y1="{py}" x2="{px + 8}" y2="{ey}" stroke="#000" stroke-width="0.9"/>')
 
 
 def poly(points: list[tuple[float, float]]) -> str:
@@ -149,27 +156,27 @@ rels = []
 # admins(1) — operators(N): горизонталь в верхней полосе
 y1 = g_ad.top + 60
 rels.append(poly([(g_ad.left, y1), (g_op.right, y1)]))
-rels.append(crow_one(g_ad.left, y1, -1, 0))
-rels.append(crow_many(g_op.right, y1, -1, 0))
+rels.append(crow_one(g_ad.left, y1, -1, 0))   # наружу влево от admins
+rels.append(crow_many(g_op.right, y1, 1, 0))  # наружу вправо от operators
 # admins(1) — drones(N): горизонталь
 y2 = g_ad.top + 60
 rels.append(poly([(g_ad.right, y2), (g_dr.left, y2)]))
-rels.append(crow_one(g_ad.right, y2, 1, 0))
-rels.append(crow_many(g_dr.left, y2, 1, 0))
+rels.append(crow_one(g_ad.right, y2, 1, 0))    # наружу вправо от admins
+rels.append(crow_many(g_dr.left, y2, -1, 0))   # наружу влево от drones
 # admins(1) — deliveries(N): вертикаль вниз по центру
 xv = g_ad.cx
 rels.append(poly([(xv, g_ad.bottom), (xv, g_de.top)]))
-rels.append(crow_one(xv, g_ad.bottom, 0, 1))
-rels.append(crow_many(xv, g_de.top, 0, 1))
+rels.append(crow_one(xv, g_ad.bottom, 0, 1))   # наружу вниз от admins
+rels.append(crow_many(xv, g_de.top, 0, -1))    # наружу вверх от deliveries
 # drones(1) — deliveries(N): вниз и влево к правому краю deliveries
 yj = 415
 rels.append(poly([(g_dr.cx, g_dr.bottom), (g_dr.cx, yj), (g_de.right + 75, yj), (g_de.right + 75, g_de.top + 70), (g_de.right, g_de.top + 70)]))
-rels.append(crow_one(g_dr.cx, g_dr.bottom, 0, 1))
-rels.append(crow_many(g_de.right, g_de.top + 70, 1, 0))
+rels.append(crow_one(g_dr.cx, g_dr.bottom, 0, 1))      # наружу вниз от drones
+rels.append(crow_many(g_de.right, g_de.top + 70, 1, 0))  # наружу вправо от deliveries
 # operators(1) — deliveries(N): вниз и вправо к левому краю deliveries
 rels.append(poly([(g_op.cx, g_op.bottom), (g_op.cx, yj + 30), (g_de.left - 75, yj + 30), (g_de.left - 75, g_de.top + 130), (g_de.left, g_de.top + 130)]))
-rels.append(crow_one(g_op.cx, g_op.bottom, 0, 1))
-rels.append(crow_many(g_de.left, g_de.top + 130, -1, 0))
+rels.append(crow_one(g_op.cx, g_op.bottom, 0, 1))        # наружу вниз от operators
+rels.append(crow_many(g_de.left, g_de.top + 130, -1, 0))  # наружу влево от deliveries
 
 caption = (f'<text x="{W/2}" y="{H-22}" text-anchor="middle" font-style="italic" '
            f'font-size="17">Рисунок 1 – Логическая модель данных (ER-диаграмма) системы Mavix</text>')
