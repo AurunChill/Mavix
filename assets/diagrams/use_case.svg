@@ -59,9 +59,13 @@
 <line x1="1150.0" y1="455.0" x2="1125.0" y2="455.0" stroke="#000" stroke-width="0.9"/>
 <line x1="1150.0" y1="615.0" x2="1125.0" y2="615.0" stroke="#000" stroke-width="0.9"/>
 <line x1="1150.0" y1="775.0" x2="1125.0" y2="775.0" stroke="#000" stroke-width="0.9"/>
-<polyline points="985.0,497.0 985.0,564.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5" marker-end="url(#open)"/>
+<polyline points="985.0,497.0 985.0,563.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5"/>
+<line x1="980.0" y1="551.0" x2="985.0" y2="563.0" stroke="#000" stroke-width="0.9"/>
+<line x1="990.0" y1="551.0" x2="985.0" y2="563.0" stroke="#000" stroke-width="0.9"/>
 <text x="995.0" y="540.0" text-anchor="start" font-size="12" font-style="italic">«include»</text>
-<polyline points="845.0,775.0 815.0,775.0 815.0,455.0 836.0,455.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5" marker-end="url(#open)"/>
+<polyline points="845.0,775.0 815.0,775.0 815.0,455.0 835.0,455.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5"/>
+<line x1="823.0" y1="460.0" x2="835.0" y2="455.0" stroke="#000" stroke-width="0.9"/>
+<line x1="823.0" y1="450.0" x2="835.0" y2="455.0" stroke="#000" stroke-width="0.9"/>
 <text x="805.0" y="620.0" text-anchor="end" font-size="12" font-style="italic">«extend»</text>
 <text x="790.0" y="988" text-anchor="middle" font-style="italic" font-size="17">Рисунок 5 – Диаграмма вариантов использования (Use Case) системы Mavix</text>
 </svg>

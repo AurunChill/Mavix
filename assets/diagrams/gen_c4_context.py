@@ -36,11 +36,11 @@ for ex, name, sub in ext:
     ext_geom[name] = (ex + EW / 2, EY)
 
 # Связи акторов с системой (стрелки в систему)
-c.poly([(230, 150), (sx_cx - 60, 150), (sx_cx - 60, SY)], marker='arr')
-c.text(300, 140, 'HTTPS: операторы, дроны, заявки', fs=14, anchor='start')
-c.poly([(1270, 150), (sx_cx + 60, 150), (sx_cx + 60, SY)], marker='arr')
-c.text(1240, 140, 'Веб/Desktop: приём заявок,', fs=14, anchor='end')
-c.text(1240, 158, 'видео + телеметрия (WebRTC)', fs=14, anchor='end')
+c.poly([(230, 165), (sx_cx - 60, 165), (sx_cx - 60, SY)], marker='arr')
+c.text(300, 150, 'HTTPS: операторы, дроны, заявки', fs=14, anchor='start')
+c.poly([(1270, 165), (sx_cx + 60, 165), (sx_cx + 60, SY)], marker='arr')
+c.text(1248, 132, 'Веб/Desktop: приём заявок,', fs=14, anchor='end')
+c.text(1248, 150, 'видео + телеметрия (WebRTC)', fs=14, anchor='end')
 
 # Связи системы с внешними (вниз)
 labels = {
@@ -51,12 +51,12 @@ labels = {
 for name in ('SMTP-сервер', 'STUN / TURN', 'Nominatim'):
     tx, ty = ext_geom[name]
     c.poly([(sx_cx, SY + SH), (sx_cx, 640), (tx, 640), (tx, ty)], marker='arr')
-    c.text(tx, ty - 10, labels[name], fs=13, anchor='middle')
+    c.text(tx + 16, 700, labels[name], fs=13, anchor='start')
 
 # Оператор ↔ QGroundControl
 qx, qy = ext_geom['QGroundControl']
 c.poly([(1320, 218), (1320, 690), (qx, 690), (qx, qy)], marker='arr')
-c.text(qx + 10, 690 - 8, 'ручной MAVLink-полёт', fs=13, anchor='middle')
+c.text(qx + 16, 700, 'ручной MAVLink-полёт', fs=13, anchor='start')
 
 out = pathlib.Path(__file__).parent / 'c4_context.svg'
 out.write_text(c.svg('Рисунок 2 – Контекстная диаграмма (C4 Level 1) системы Mavix'), encoding='utf-8')

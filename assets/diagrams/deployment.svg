@@ -43,19 +43,26 @@
 <rect x="520.0" y="825.0" width="250.0" height="80.0" stroke="#000" fill="none" stroke-width="1.1"/>
 <text x="645.0" y="861.0" text-anchor="middle" font-size="15" font-weight="bold">Камеры</text>
 <text x="645.0" y="881.0" text-anchor="middle" font-size="14" font-style="italic">USB / CSI</text>
-<polyline points="370.0,242.0 491.0,242.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="370.0,242.0 490.0,242.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="490.0,242.0 478.0,247.0 478.0,237.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="435.0" y="232.0" text-anchor="middle" font-size="13" >HTTPS</text>
-<polyline points="1100.0,230.0 989.0,230.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="1100.0,230.0 990.0,230.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="990.0,230.0 1002.0,225.0 1002.0,235.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="1040.0" y="220.0" text-anchor="middle" font-size="13" >HTTPS + WSS</text>
-<polyline points="560.0,705.0 560.0,399.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="560.0,705.0 560.0,400.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="560.0,400.0 565.0,412.0 555.0,412.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="572.0" y="540.0" text-anchor="start" font-size="13" >WSS-сигналинг + enrollment</text>
-<polyline points="1250.0,490.0 1250.0,790.0 989.0,790.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
-<polyline points="980.0,770.0 1230.0,770.0 1230.0,499.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="1250.0,490.0 1250.0,790.0 990.0,790.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="990.0,790.0 1002.0,785.0 1002.0,795.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="980.0,770.0 1230.0,770.0 1230.0,500.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1230.0,500.0 1235.0,512.0 1225.0,512.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="1245.0" y="700.0" text-anchor="start" font-size="13" >WebRTC P2P</text>
 <text x="1245.0" y="718.0" text-anchor="start" font-size="13" >(видео + data)</text>
-<polyline points="770.0,755.0 791.0,755.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="770.0,755.0 790.0,755.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="790.0,755.0 778.0,760.0 778.0,750.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="785.0" y="745.0" text-anchor="middle" font-size="12" >UART</text>
-<polyline points="645.0,805.0 645.0,816.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polyline points="645.0,805.0 645.0,815.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="645.0,815.0 640.0,803.0 650.0,803.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="657.0" y="820.0" text-anchor="start" font-size="12" >USB/CSI</text>
 <text x="780.0" y="998" text-anchor="middle" font-style="italic" font-size="17">Рисунок 6 – Диаграмма развёртывания (Deployment) системы Mavix</text>
 </svg>
