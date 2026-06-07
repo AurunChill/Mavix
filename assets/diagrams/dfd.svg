@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="800" viewBox="0 0 1680 800" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1680" height="800" fill="#fff"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#000"/></marker></defs>
+<rect x="60.0" y="120.0" width="175.0" height="80.0" stroke="#000" fill="none" stroke-width="1.4"/>
+<text x="147.5" y="165.0" text-anchor="middle" font-size="14" font-weight="bold">Администратор</text>
+<rect x="60.0" y="560.0" width="175.0" height="80.0" stroke="#000" fill="none" stroke-width="1.4"/>
+<text x="147.5" y="605.0" text-anchor="middle" font-size="14" font-weight="bold">Оператор</text>
+<rect x="1470.0" y="560.0" width="150.0" height="120.0" stroke="#000" fill="none" stroke-width="1.4"/>
+<text x="1545.0" y="616.0" text-anchor="middle" font-size="14" font-weight="bold">Дрон</text>
+<text x="1545.0" y="634.0" text-anchor="middle" font-size="14" font-weight="bold">(борт)</text>
+<rect x="360" y="330" width="210" height="90" rx="14" ry="14" stroke="#000" fill="none" stroke-width="1.3"/>
+<line x1="360" y1="356" x2="394" y2="356" stroke="#000" stroke-width="1.0"/>
+<line x1="394" y1="330" x2="394" y2="356" stroke="#000" stroke-width="1.0"/>
+<text x="377.0" y="348.0" text-anchor="middle" font-size="13" font-weight="bold">1</text>
+<text x="473.0" y="375.0" text-anchor="middle" font-size="13.5" font-weight="bold">Аутенти-</text>
+<text x="473.0" y="393.0" text-anchor="middle" font-size="13.5" font-weight="bold">фикация</text>
+<rect x="660" y="120" width="230" height="95" rx="14" ry="14" stroke="#000" fill="none" stroke-width="1.3"/>
+<line x1="660" y1="146" x2="694" y2="146" stroke="#000" stroke-width="1.0"/>
+<line x1="694" y1="120" x2="694" y2="146" stroke="#000" stroke-width="1.0"/>
+<text x="677.0" y="138.0" text-anchor="middle" font-size="13" font-weight="bold">2</text>
+<text x="783.0" y="167.5" text-anchor="middle" font-size="13.5" font-weight="bold">Управление</text>
+<text x="783.0" y="185.5" text-anchor="middle" font-size="13.5" font-weight="bold">парком</text>
+<rect x="660" y="360" width="250" height="110" rx="14" ry="14" stroke="#000" fill="none" stroke-width="1.3"/>
+<line x1="660" y1="386" x2="694" y2="386" stroke="#000" stroke-width="1.0"/>
+<line x1="694" y1="360" x2="694" y2="386" stroke="#000" stroke-width="1.0"/>
+<text x="677.0" y="378.0" text-anchor="middle" font-size="13" font-weight="bold">3</text>
+<text x="793.0" y="415.0" text-anchor="middle" font-size="13.5" font-weight="bold">Управление</text>
+<text x="793.0" y="433.0" text-anchor="middle" font-size="13.5" font-weight="bold">доставками</text>
+<rect x="1120" y="560" width="260" height="120" rx="14" ry="14" stroke="#000" fill="none" stroke-width="1.3"/>
+<line x1="1120" y1="586" x2="1154" y2="586" stroke="#000" stroke-width="1.0"/>
+<line x1="1154" y1="560" x2="1154" y2="586" stroke="#000" stroke-width="1.0"/>
+<text x="1137.0" y="578.0" text-anchor="middle" font-size="13" font-weight="bold">4</text>
+<text x="1258.0" y="620.0" text-anchor="middle" font-size="13.5" font-weight="bold">Связь и</text>
+<text x="1258.0" y="638.0" text-anchor="middle" font-size="13.5" font-weight="bold">пилотирование</text>
+<line x1="1000.0" y1="135.0" x2="1330.0" y2="135.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1000.0" y1="181.0" x2="1330.0" y2="181.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1000.0" y1="135.0" x2="1000.0" y2="181.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1040.0" y1="135.0" x2="1040.0" y2="181.0" stroke="#000" stroke-width="0.9"/>
+<text x="1020.0" y="163.0" text-anchor="middle" font-size="13" font-weight="bold">D1</text>
+<text x="1185.0" y="163.0" text-anchor="middle" font-size="13" >Учётные записи и парк</text>
+<line x1="1000.0" y1="400.0" x2="1330.0" y2="400.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1000.0" y1="446.0" x2="1330.0" y2="446.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1000.0" y1="400.0" x2="1000.0" y2="446.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1040.0" y1="400.0" x2="1040.0" y2="446.0" stroke="#000" stroke-width="0.9"/>
+<text x="1020.0" y="428.0" text-anchor="middle" font-size="13" font-weight="bold">D2</text>
+<text x="1185.0" y="428.0" text-anchor="middle" font-size="13" >Доставки (журнал)</text>
+<polyline points="235.0,360.0 346.0,360.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="346.0,360.0 334.0,365.0 334.0,355.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="297.5" y="350.0" text-anchor="middle" font-size="12" >учётные данные</text>
+<polyline points="235.0,600.0 300.0,600.0 300.0,395.0 346.0,395.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="346.0,395.0 334.0,400.0 334.0,390.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="250.0" y="470.0" text-anchor="start" font-size="12" >учётные данные</text>
+<polyline points="235.0,160.0 646.0,160.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="646.0,160.0 634.0,165.0 634.0,155.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="447.5" y="150.0" text-anchor="middle" font-size="12" >оператор / дрон</text>
+<polyline points="890.0,168.0 986.0,168.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="986.0,168.0 974.0,173.0 974.0,163.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="945.0" y="158.0" text-anchor="middle" font-size="12" >записи</text>
+<polyline points="235.0,185.0 600.0,185.0 600.0,385.0 646.0,385.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="646.0,385.0 634.0,390.0 634.0,380.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="612.0" y="300.0" text-anchor="start" font-size="12" >новая заявка</text>
+<polyline points="235.0,615.0 620.0,615.0 620.0,450.0 646.0,450.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="646.0,450.0 634.0,455.0 634.0,445.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="632.0" y="540.0" text-anchor="start" font-size="12" >принять заявку</text>
+<polyline points="910.0,415.0 986.0,415.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="986.0,415.0 974.0,420.0 974.0,410.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="955.0" y="405.0" text-anchor="middle" font-size="12" >заявка / статус</text>
+<polyline points="785.0,470.0 785.0,620.0 1106.0,620.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1106.0,620.0 1094.0,625.0 1094.0,615.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="797.0" y="540.0" text-anchor="start" font-size="12" >drone_id</text>
+<polyline points="235.0,640.0 540.0,640.0 540.0,700.0 1106.0,700.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1106.0,700.0 1094.0,705.0 1094.0,695.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="770.0" y="712.0" text-anchor="middle" font-size="12" >команды (джойстик)</text>
+<polyline points="1120.0,600.0 980.0,600.0 980.0,520.0 240.0,520.0 240.0,626.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="240.0,626.0 235.0,614.0 245.0,614.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="700.0" y="510.0" text-anchor="middle" font-size="12" >видео, телеметрия</text>
+<polyline points="1470.0,600.0 1394.0,600.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1394.0,600.0 1406.0,595.0 1406.0,605.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="1425.0" y="590.0" text-anchor="middle" font-size="12" >видео + телеметрия</text>
+<polyline points="1380.0,640.0 1456.0,640.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1456.0,640.0 1444.0,645.0 1444.0,635.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="1425.0" y="660.0" text-anchor="middle" font-size="12" >команды (CRSF/MAVLink)</text>
+<polyline points="1250.0,560.0 1250.0,512.0 820.0,512.0 820.0,484.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="820.0,484.0 825.0,496.0 815.0,496.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="1010.0" y="504.0" text-anchor="middle" font-size="12" >статус доставки</text>
+<text x="840.0" y="778" text-anchor="middle" font-style="italic" font-size="17">Рисунок 12 – Диаграмма потоков данных (DFD) системы Mavix</text>
+</svg>
