@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1260" height="1020" viewBox="0 0 1260 1020" font-family="Liberation Serif, Times New Roman, serif">
 <rect width="1260" height="1020" fill="#fff"/>
 <polyline points="445.0,130.0 405.0,130.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<line x1="457" y1="123" x2="457" y2="137" stroke="#000" stroke-width="1.0"/>
+<line x1="433" y1="123" x2="433" y2="137" stroke="#000" stroke-width="1.0"/>
 <line x1="405" y1="130" x2="418" y2="122" stroke="#000" stroke-width="0.9"/><line x1="405" y1="130" x2="418" y2="130" stroke="#000" stroke-width="0.9"/><line x1="405" y1="130" x2="418" y2="138" stroke="#000" stroke-width="0.9"/>
 <polyline points="820.0,130.0 855.0,130.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<line x1="808" y1="123" x2="808" y2="137" stroke="#000" stroke-width="1.0"/>
+<line x1="832" y1="123" x2="832" y2="137" stroke="#000" stroke-width="1.0"/>
 <line x1="855" y1="130" x2="842" y2="122" stroke="#000" stroke-width="0.9"/><line x1="855" y1="130" x2="842" y2="130" stroke="#000" stroke-width="0.9"/><line x1="855" y1="130" x2="842" y2="138" stroke="#000" stroke-width="0.9"/>
 <polyline points="632.5,266.0 632.5,470.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<line x1="625.5" y1="254" x2="639.5" y2="254" stroke="#000" stroke-width="1.0"/>
+<line x1="625.5" y1="278" x2="639.5" y2="278" stroke="#000" stroke-width="1.0"/>
 <line x1="632.5" y1="470" x2="624.5" y2="457" stroke="#000" stroke-width="0.9"/><line x1="632.5" y1="470" x2="632.5" y2="457" stroke="#000" stroke-width="0.9"/><line x1="632.5" y1="470" x2="640.5" y2="457" stroke="#000" stroke-width="0.9"/>
 <polyline points="1042.5,266.0 1042.5,415.0 895.0,415.0 895.0,540.0 820.0,540.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<line x1="1035.5" y1="254" x2="1049.5" y2="254" stroke="#000" stroke-width="1.0"/>
-<line x1="820" y1="540" x2="807" y2="532" stroke="#000" stroke-width="0.9"/><line x1="820" y1="540" x2="807" y2="540" stroke="#000" stroke-width="0.9"/><line x1="820" y1="540" x2="807" y2="548" stroke="#000" stroke-width="0.9"/>
+<line x1="1035.5" y1="278" x2="1049.5" y2="278" stroke="#000" stroke-width="1.0"/>
+<line x1="820" y1="540" x2="833" y2="532" stroke="#000" stroke-width="0.9"/><line x1="820" y1="540" x2="833" y2="540" stroke="#000" stroke-width="0.9"/><line x1="820" y1="540" x2="833" y2="548" stroke="#000" stroke-width="0.9"/>
 <polyline points="217.5,338.0 217.5,445.0 370.0,445.0 370.0,600.0 445.0,600.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<line x1="210.5" y1="326" x2="224.5" y2="326" stroke="#000" stroke-width="1.0"/>
-<line x1="445" y1="600" x2="458" y2="592" stroke="#000" stroke-width="0.9"/><line x1="445" y1="600" x2="458" y2="600" stroke="#000" stroke-width="0.9"/><line x1="445" y1="600" x2="458" y2="608" stroke="#000" stroke-width="0.9"/>
+<line x1="210.5" y1="350" x2="224.5" y2="350" stroke="#000" stroke-width="1.0"/>
+<line x1="445" y1="600" x2="432" y2="592" stroke="#000" stroke-width="0.9"/><line x1="445" y1="600" x2="432" y2="600" stroke="#000" stroke-width="0.9"/><line x1="445" y1="600" x2="432" y2="608" stroke="#000" stroke-width="0.9"/>
 <rect x="30" y="70" width="375" height="268" stroke="#000" fill="none" stroke-width="1.2"/>
 <text x="217.5" y="89" text-anchor="middle" font-style="italic" font-size="17" font-weight="bold">operators</text>
 <line x1="30" y1="98" x2="405" y2="98" stroke="#000" stroke-width="1.1"/>
