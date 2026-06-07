@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1080" viewBox="0 0 1560 1080" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1560" height="1080" fill="#fff"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#000"/></marker></defs>
+<rect x="100.0" y="130.0" width="340.0" height="168.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="270.0" y="149.0" text-anchor="middle" font-size="16" font-weight="bold">FCService</text>
+<line x1="100.0" y1="158.0" x2="440.0" y2="158.0" stroke="#000" stroke-width="1.0"/>
+<text x="109.0" y="172.0" text-anchor="start" font-size="12.5" >+ kind: str</text>
+<text x="109.0" y="192.0" text-anchor="start" font-size="12.5" >+ name: str</text>
+<text x="109.0" y="212.0" text-anchor="start" font-size="12.5" >+ is_connected: bool</text>
+<line x1="100.0" y1="218.0" x2="440.0" y2="218.0" stroke="#000" stroke-width="1.0"/>
+<text x="109.0" y="232.0" text-anchor="start" font-size="12.5" >+ start() / stop()</text>
+<text x="109.0" y="252.0" text-anchor="start" font-size="12.5" >+ send(data)</text>
+<text x="109.0" y="272.0" text-anchor="start" font-size="12.5" >+ set_telemetry_callback(cb)</text>
+<text x="109.0" y="292.0" text-anchor="start" font-size="12.5" >+ set_packet_callback(cb)</text>
+<rect x="560.0" y="90.0" width="410.0" height="208.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="765.0" y="109.0" text-anchor="middle" font-size="16" font-weight="bold">SessionCoordinator</text>
+<line x1="560.0" y1="118.0" x2="970.0" y2="118.0" stroke="#000" stroke-width="1.0"/>
+<text x="569.0" y="132.0" text-anchor="start" font-size="12.5" >- _signal_client</text>
+<text x="569.0" y="152.0" text-anchor="start" font-size="12.5" >- _manager: WebRTCManager</text>
+<text x="569.0" y="172.0" text-anchor="start" font-size="12.5" >- _pipeline: GStreamerPipe</text>
+<text x="569.0" y="192.0" text-anchor="start" font-size="12.5" >- _fc_service: FCService</text>
+<line x1="560.0" y1="198.0" x2="970.0" y2="198.0" stroke="#000" stroke-width="1.0"/>
+<text x="569.0" y="212.0" text-anchor="start" font-size="12.5" >+ run() / stop()</text>
+<text x="569.0" y="232.0" text-anchor="start" font-size="12.5" >- _on_message(msg)</text>
+<text x="569.0" y="252.0" text-anchor="start" font-size="12.5" >- _handle_connect(gcs_id)</text>
+<text x="569.0" y="272.0" text-anchor="start" font-size="12.5" >- _teardown()</text>
+<text x="569.0" y="292.0" text-anchor="start" font-size="12.5" >- _release_pipeline(p)</text>
+<rect x="1120.0" y="130.0" width="340.0" height="148.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1290.0" y="149.0" text-anchor="middle" font-size="16" font-weight="bold">GStreamerPipe</text>
+<line x1="1120.0" y1="158.0" x2="1460.0" y2="158.0" stroke="#000" stroke-width="1.0"/>
+<text x="1129.0" y="172.0" text-anchor="start" font-size="12.5" >+ pipeline</text>
+<text x="1129.0" y="192.0" text-anchor="start" font-size="12.5" >+ webrtc_elem</text>
+<text x="1129.0" y="212.0" text-anchor="start" font-size="12.5" >+ cameras</text>
+<line x1="1120.0" y1="218.0" x2="1460.0" y2="218.0" stroke="#000" stroke-width="1.0"/>
+<text x="1129.0" y="232.0" text-anchor="start" font-size="12.5" >+ start() / stop()</text>
+<text x="1129.0" y="252.0" text-anchor="start" font-size="12.5" >+ update_bitrate(i, kbps)</text>
+<text x="1129.0" y="272.0" text-anchor="start" font-size="12.5" >- _disable_upnp(el)</text>
+<rect x="585.0" y="470.0" width="380.0" height="168.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="775.0" y="489.0" text-anchor="middle" font-size="16" font-weight="bold">WebRTCManager</text>
+<line x1="585.0" y1="498.0" x2="965.0" y2="498.0" stroke="#000" stroke-width="1.0"/>
+<text x="594.0" y="512.0" text-anchor="start" font-size="12.5" >- _peer: PeerSession</text>
+<text x="594.0" y="532.0" text-anchor="start" font-size="12.5" >- _channels: DataChannelHub</text>
+<text x="594.0" y="552.0" text-anchor="start" font-size="12.5" >- _webrtc</text>
+<line x1="585.0" y1="558.0" x2="965.0" y2="558.0" stroke="#000" stroke-width="1.0"/>
+<text x="594.0" y="572.0" text-anchor="start" font-size="12.5" >+ start_session(gcs_id)</text>
+<text x="594.0" y="592.0" text-anchor="start" font-size="12.5" >+ end_session()</text>
+<text x="594.0" y="612.0" text-anchor="start" font-size="12.5" >+ handle_sdp() / handle_ice()</text>
+<text x="594.0" y="632.0" text-anchor="start" font-size="12.5" >+ notify_fc_changed()</text>
+<rect x="140.0" y="800.0" width="360.0" height="148.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="320.0" y="819.0" text-anchor="middle" font-size="16" font-weight="bold">PeerSession</text>
+<line x1="140.0" y1="828.0" x2="500.0" y2="828.0" stroke="#000" stroke-width="1.0"/>
+<text x="149.0" y="842.0" text-anchor="start" font-size="12.5" >+ gcs_id: str</text>
+<text x="149.0" y="862.0" text-anchor="start" font-size="12.5" >+ offer_sdp: str</text>
+<text x="149.0" y="882.0" text-anchor="start" font-size="12.5" >- _webrtc (из GStreamerPipe)</text>
+<line x1="140.0" y1="888.0" x2="500.0" y2="888.0" stroke="#000" stroke-width="1.0"/>
+<text x="149.0" y="902.0" text-anchor="start" font-size="12.5" >+ apply_answer(sdp)</text>
+<text x="149.0" y="922.0" text-anchor="start" font-size="12.5" >+ add_remote_ice(cand)</text>
+<text x="149.0" y="942.0" text-anchor="start" font-size="12.5" >+ close()</text>
+<rect x="1040.0" y="800.0" width="380.0" height="88.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1230.0" y="819.0" text-anchor="middle" font-size="16" font-weight="bold">DataChannelHub</text>
+<line x1="1040.0" y1="828.0" x2="1420.0" y2="828.0" stroke="#000" stroke-width="1.0"/>
+<text x="1049.0" y="842.0" text-anchor="start" font-size="12.5" >+ packet · ping</text>
+<text x="1049.0" y="862.0" text-anchor="start" font-size="12.5" >+ config · telemetry</text>
+<line x1="1040.0" y1="868.0" x2="1420.0" y2="868.0" stroke="#000" stroke-width="1.0"/>
+<text x="1049.0" y="882.0" text-anchor="start" font-size="12.5" >+ close()</text>
+<polyline points="765.0,298.0 765.0,470.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polygon points="756,298 765,307 765,316 774,307" fill="#000" stroke="#000"/>
+<polyline points="970.0,175.0 1120.0,175.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polygon points="970,166 979,175 988,175 979,184" fill="#000" stroke="#000"/>
+<polyline points="560.0,200.0 440.0,200.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<text x="500.0" y="192.0" text-anchor="middle" font-size="12" >fc_service</text>
+<polyline points="645.0,638.0 645.0,760.0 320.0,760.0 320.0,800.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polygon points="636,638 645,647 645,656 654,647" fill="#000" stroke="#000"/>
+<polyline points="905.0,638.0 905.0,760.0 1230.0,760.0 1230.0,800.0" stroke="#000" fill="none" stroke-width="0.9" marker-end="url(#arr)"/>
+<polygon points="896,638 905,647 905,656 914,647" fill="#000" stroke="#000"/>
+<text x="780.0" y="1058" text-anchor="middle" font-style="italic" font-size="17">Рисунок 8 – Диаграмма классов WebRTC-слоя MavixBoard</text>
+</svg>
