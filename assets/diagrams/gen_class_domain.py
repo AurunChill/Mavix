@@ -83,9 +83,9 @@ c.text(g_de.left - 8, 652, '0..*', fs=12, anchor='end')
 c.poly([(g_dr.left, 640), (g_de.right, 640)], marker='arr')
 c.text(g_dr.left - 8, 632, '1', fs=12, anchor='end')
 c.text(g_de.right + 8, 632, '0..*', fs=12, anchor='start')
-# Delivery ··> DeliveryStatus (зависимость)
-c.poly([(g_de.right, 760), (g_st.left, 760), (g_st.left, g_st.cy)], marker='open', dash=True)
-c.text((g_de.right + g_st.left) / 2, 752, '«использует»', fs=12)
+# Delivery ··> DeliveryStatus (зависимость) — заходим в ВЕРХ таблицы, не вдоль грани
+c.poly([(g_de.right, 770), (g_st.cx, 770), (g_st.cx, g_st.top)], marker='open', dash=True)
+c.text((g_de.right + g_st.cx) / 2, 762, '«использует»', fs=12)
 
 out = pathlib.Path(__file__).parent / 'class_domain.svg'
 out.write_text(c.svg('Рисунок 7 – Диаграмма классов доменной модели MavixServer'), encoding='utf-8')

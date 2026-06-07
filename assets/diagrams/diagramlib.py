@@ -6,6 +6,8 @@
 """
 from __future__ import annotations
 
+import math
+
 FONT = 'Liberation Serif, Times New Roman, serif'
 
 
@@ -44,20 +46,40 @@ class Canvas:
         self.add(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" '
                  f'stroke="#000" stroke-width="{sw}"{d}/>')
 
-    def poly(self, pts, sw=0.9, marker=None, dash=False, gap=9) -> None:
-        # Если есть наконечник — укорачиваем последний сегмент на gap, чтобы
-        # стрелка останавливалась СНАРУЖИ целевого блока (наконечник в зазоре,
-        # не влезает внутрь и не накрывает текст/границу).
+    def arrowhead(self, x, y, dx, dy, open=False) -> None:
+        """Наконечник стрелки явным полигоном (НЕ через <marker> — QtSvg их
+        рендерит неверно). (dx,dy) — направление движения линии в точку (x,y)."""
+        a = math.atan2(dy, dx)
+        L, W = 12.0, 5.0
+        bx, by = x - L * math.cos(a), y - L * math.sin(a)
+        nx, ny = -math.sin(a) * W, math.cos(a) * W
+        p1 = (bx + nx, by + ny)
+        p2 = (bx - nx, by - ny)
+        if open:  # открытый (реализация/ответ/include/extend) — две черты
+            self.line(p1[0], p1[1], x, y, sw=0.9)
+            self.line(p2[0], p2[1], x, y, sw=0.9)
+        else:     # закрашенный треугольник (ассоциация/синхронный вызов)
+            self.add(f'<polygon points="{x:.1f},{y:.1f} {p1[0]:.1f},{p1[1]:.1f} '
+                     f'{p2[0]:.1f},{p2[1]:.1f}" fill="#000" stroke="#000" stroke-width="0.6"/>')
+
+    def poly(self, pts, sw=0.9, marker=None, dash=False, gap=10) -> None:
+        # Наконечник рисуем САМИ полигоном со СДВИГОМ на gap наружу от цели —
+        # стрелка стоит снаружи блока с отступом, не сливается с границей.
         pts = [(float(x), float(y)) for x, y in pts]
+        head = None
         if marker and len(pts) >= 2:
             (x1, y1), (x2, y2) = pts[-2], pts[-1]
             dx, dy = x2 - x1, y2 - y1
             dist = (dx * dx + dy * dy) ** 0.5 or 1.0
-            pts[-1] = (x2 - dx / dist * gap, y2 - dy / dist * gap)
+            ux, uy = dx / dist, dy / dist
+            tx, ty = x2 - ux * gap, y2 - uy * gap   # кончик с отступом
+            pts[-1] = (tx, ty)
+            head = (tx, ty, ux, uy)
         p = ' '.join(f'{x:.1f},{y:.1f}' for x, y in pts)
         d = ' stroke-dasharray="6 5"' if dash else ''
-        m = f' marker-end="url(#{marker})"' if marker else ''
-        self.add(f'<polyline points="{p}" stroke="#000" fill="none" stroke-width="{sw}"{d}{m}/>')
+        self.add(f'<polyline points="{p}" stroke="#000" fill="none" stroke-width="{sw}"{d}/>')
+        if head:
+            self.arrowhead(head[0], head[1], head[2], head[3], open=(marker == 'open'))
 
     def rect(self, x, y, w, h, sw=1.2) -> None:
         self.add(f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" '
