@@ -1,55 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000" font-family="Liberation Serif, Times New Roman, serif">
-<rect width="1500" height="1000" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1580" height="1010" viewBox="0 0 1580 1010" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1580" height="1010" fill="#fff"/>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#000"/></marker></defs>
-<rect x="360.0" y="70.0" width="780.0" height="850.0" stroke="#000" fill="none" stroke-width="1.6"/>
-<text x="750.0" y="102.0" text-anchor="middle" font-size="18" font-weight="bold">Mavix</text>
-<circle cx="165" cy="401" r="11" stroke="#000" fill="none" stroke-width="1.1"/>
-<line x1="165.0" y1="412.0" x2="165.0" y2="446.0" stroke="#000" stroke-width="1.1"/>
-<line x1="145.0" y1="424.0" x2="185.0" y2="424.0" stroke="#000" stroke-width="1.1"/>
-<line x1="165.0" y1="446.0" x2="149.0" y2="468.0" stroke="#000" stroke-width="1.1"/>
-<line x1="165.0" y1="446.0" x2="181.0" y2="468.0" stroke="#000" stroke-width="1.1"/>
-<text x="165.0" y="488.0" text-anchor="middle" font-size="17" >Администратор</text>
-<circle cx="1335" cy="401" r="11" stroke="#000" fill="none" stroke-width="1.1"/>
-<line x1="1335.0" y1="412.0" x2="1335.0" y2="446.0" stroke="#000" stroke-width="1.1"/>
-<line x1="1315.0" y1="424.0" x2="1355.0" y2="424.0" stroke="#000" stroke-width="1.1"/>
-<line x1="1335.0" y1="446.0" x2="1319.0" y2="468.0" stroke="#000" stroke-width="1.1"/>
-<line x1="1335.0" y1="446.0" x2="1351.0" y2="468.0" stroke="#000" stroke-width="1.1"/>
-<text x="1335.0" y="488.0" text-anchor="middle" font-size="17" >Оператор</text>
-<ellipse cx="750" cy="185" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="750.0" y="190.0" text-anchor="middle" font-size="15" >Вход в систему</text>
-<ellipse cx="575" cy="305" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="575.0" y="301.0" text-anchor="middle" font-size="15" >Создать</text>
-<text x="575.0" y="319.0" text-anchor="middle" font-size="15" >оператора</text>
-<ellipse cx="575" cy="415" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="575.0" y="411.0" text-anchor="middle" font-size="15" >Скачать дистрибутив</text>
-<text x="575.0" y="429.0" text-anchor="middle" font-size="15" >борта</text>
-<ellipse cx="575" cy="525" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="575.0" y="521.0" text-anchor="middle" font-size="15" >Создать заявку</text>
-<text x="575.0" y="539.0" text-anchor="middle" font-size="15" >на доставку</text>
-<ellipse cx="575" cy="635" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="575.0" y="631.0" text-anchor="middle" font-size="15" >Журнал</text>
-<text x="575.0" y="649.0" text-anchor="middle" font-size="15" >доставок</text>
-<ellipse cx="575" cy="745" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<rect x="370.0" y="70.0" width="820.0" height="860.0" stroke="#000" fill="none" stroke-width="1.6"/>
+<text x="780.0" y="102.0" text-anchor="middle" font-size="18" font-weight="bold">Mavix</text>
+<circle cx="155" cy="391" r="11" stroke="#000" fill="none" stroke-width="1.1"/>
+<line x1="155.0" y1="402.0" x2="155.0" y2="436.0" stroke="#000" stroke-width="1.1"/>
+<line x1="135.0" y1="414.0" x2="175.0" y2="414.0" stroke="#000" stroke-width="1.1"/>
+<line x1="155.0" y1="436.0" x2="139.0" y2="458.0" stroke="#000" stroke-width="1.1"/>
+<line x1="155.0" y1="436.0" x2="171.0" y2="458.0" stroke="#000" stroke-width="1.1"/>
+<text x="155.0" y="478.0" text-anchor="middle" font-size="17" >Администратор</text>
+<circle cx="1425" cy="391" r="11" stroke="#000" fill="none" stroke-width="1.1"/>
+<line x1="1425.0" y1="402.0" x2="1425.0" y2="436.0" stroke="#000" stroke-width="1.1"/>
+<line x1="1405.0" y1="414.0" x2="1445.0" y2="414.0" stroke="#000" stroke-width="1.1"/>
+<line x1="1425.0" y1="436.0" x2="1409.0" y2="458.0" stroke="#000" stroke-width="1.1"/>
+<line x1="1425.0" y1="436.0" x2="1441.0" y2="458.0" stroke="#000" stroke-width="1.1"/>
+<text x="1425.0" y="478.0" text-anchor="middle" font-size="17" >Оператор</text>
+<ellipse cx="780" cy="150" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="780.0" y="155.0" text-anchor="middle" font-size="15" >Вход в систему</text>
+<ellipse cx="575" cy="300" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="575.0" y="296.0" text-anchor="middle" font-size="15" >Создать</text>
+<text x="575.0" y="314.0" text-anchor="middle" font-size="15" >оператора</text>
+<ellipse cx="575" cy="410" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="575.0" y="406.0" text-anchor="middle" font-size="15" >Скачать дистрибутив</text>
+<text x="575.0" y="424.0" text-anchor="middle" font-size="15" >борта</text>
+<ellipse cx="575" cy="520" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="575.0" y="516.0" text-anchor="middle" font-size="15" >Создать заявку</text>
+<text x="575.0" y="534.0" text-anchor="middle" font-size="15" >на доставку</text>
+<ellipse cx="575" cy="630" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="575.0" y="626.0" text-anchor="middle" font-size="15" >Журнал</text>
+<text x="575.0" y="644.0" text-anchor="middle" font-size="15" >доставок</text>
+<ellipse cx="575" cy="745" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
 <text x="575.0" y="741.0" text-anchor="middle" font-size="15" >Управление</text>
 <text x="575.0" y="759.0" text-anchor="middle" font-size="15" >дронами</text>
-<ellipse cx="925" cy="360" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="925.0" y="356.0" text-anchor="middle" font-size="15" >Принять</text>
-<text x="925.0" y="374.0" text-anchor="middle" font-size="15" >заявку</text>
-<ellipse cx="925" cy="510" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="925.0" y="506.0" text-anchor="middle" font-size="15" >Управление дроном</text>
-<text x="925.0" y="524.0" text-anchor="middle" font-size="15" >(видео, телеметрия)</text>
-<ellipse cx="925" cy="660" rx="138" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="925.0" y="656.0" text-anchor="middle" font-size="15" >Сбросить</text>
-<text x="925.0" y="674.0" text-anchor="middle" font-size="15" >груз</text>
-<line x1="205.0" y1="455.0" x2="437.0" y2="305.0" stroke="#000" stroke-width="0.9"/>
-<line x1="205.0" y1="455.0" x2="437.0" y2="415.0" stroke="#000" stroke-width="0.9"/>
-<line x1="205.0" y1="455.0" x2="437.0" y2="525.0" stroke="#000" stroke-width="0.9"/>
-<line x1="205.0" y1="455.0" x2="437.0" y2="635.0" stroke="#000" stroke-width="0.9"/>
-<line x1="205.0" y1="455.0" x2="437.0" y2="745.0" stroke="#000" stroke-width="0.9"/>
-<line x1="205.0" y1="455.0" x2="620.0" y2="207.0" stroke="#000" stroke-width="0.9"/>
-<line x1="1295.0" y1="455.0" x2="1063.0" y2="360.0" stroke="#000" stroke-width="0.9"/>
-<line x1="1295.0" y1="455.0" x2="1063.0" y2="510.0" stroke="#000" stroke-width="0.9"/>
-<line x1="1295.0" y1="455.0" x2="1063.0" y2="660.0" stroke="#000" stroke-width="0.9"/>
-<line x1="1295.0" y1="455.0" x2="880.0" y2="207.0" stroke="#000" stroke-width="0.9"/>
-<text x="750.0" y="978" text-anchor="middle" font-style="italic" font-size="17">Рисунок 5 – Диаграмма вариантов использования (Use Case) системы Mavix</text>
+<ellipse cx="985" cy="300" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="985.0" y="296.0" text-anchor="middle" font-size="15" >Принять</text>
+<text x="985.0" y="314.0" text-anchor="middle" font-size="15" >заявку</text>
+<ellipse cx="985" cy="455" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="985.0" y="451.0" text-anchor="middle" font-size="15" >Управление</text>
+<text x="985.0" y="469.0" text-anchor="middle" font-size="15" >дроном</text>
+<ellipse cx="985" cy="615" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="985.0" y="611.0" text-anchor="middle" font-size="15" >Просмотр видео</text>
+<text x="985.0" y="629.0" text-anchor="middle" font-size="15" >и телеметрии</text>
+<ellipse cx="985" cy="775" rx="140" ry="42" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="985.0" y="771.0" text-anchor="middle" font-size="15" >Сбросить</text>
+<text x="985.0" y="789.0" text-anchor="middle" font-size="15" >груз</text>
+<line x1="190.0" y1="452.0" x2="410.0" y2="452.0" stroke="#000" stroke-width="0.9"/>
+<line x1="410.0" y1="150.0" x2="410.0" y2="745.0" stroke="#000" stroke-width="0.9"/>
+<line x1="410.0" y1="150.0" x2="640.0" y2="150.0" stroke="#000" stroke-width="0.9"/>
+<line x1="410.0" y1="300.0" x2="435.0" y2="300.0" stroke="#000" stroke-width="0.9"/>
+<line x1="410.0" y1="410.0" x2="435.0" y2="410.0" stroke="#000" stroke-width="0.9"/>
+<line x1="410.0" y1="520.0" x2="435.0" y2="520.0" stroke="#000" stroke-width="0.9"/>
+<line x1="410.0" y1="630.0" x2="435.0" y2="630.0" stroke="#000" stroke-width="0.9"/>
+<line x1="410.0" y1="745.0" x2="435.0" y2="745.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1390.0" y1="452.0" x2="1150.0" y2="452.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1150.0" y1="150.0" x2="1150.0" y2="775.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1150.0" y1="150.0" x2="920.0" y2="150.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1150.0" y1="300.0" x2="1125.0" y2="300.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1150.0" y1="455.0" x2="1125.0" y2="455.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1150.0" y1="615.0" x2="1125.0" y2="615.0" stroke="#000" stroke-width="0.9"/>
+<line x1="1150.0" y1="775.0" x2="1125.0" y2="775.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="985.0,497.0 985.0,564.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5" marker-end="url(#open)"/>
+<text x="995.0" y="540.0" text-anchor="start" font-size="12" font-style="italic">«include»</text>
+<polyline points="845.0,775.0 815.0,775.0 815.0,455.0 836.0,455.0" stroke="#000" fill="none" stroke-width="0.9" stroke-dasharray="6 5" marker-end="url(#open)"/>
+<text x="805.0" y="620.0" text-anchor="end" font-size="12" font-style="italic">«extend»</text>
+<text x="790.0" y="988" text-anchor="middle" font-style="italic" font-size="17">Рисунок 5 – Диаграмма вариантов использования (Use Case) системы Mavix</text>
 </svg>

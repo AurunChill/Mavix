@@ -44,7 +44,16 @@ class Canvas:
         self.add(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" '
                  f'stroke="#000" stroke-width="{sw}"{d}/>')
 
-    def poly(self, pts, sw=0.9, marker=None, dash=False) -> None:
+    def poly(self, pts, sw=0.9, marker=None, dash=False, gap=9) -> None:
+        # Если есть наконечник — укорачиваем последний сегмент на gap, чтобы
+        # стрелка останавливалась СНАРУЖИ целевого блока (наконечник в зазоре,
+        # не влезает внутрь и не накрывает текст/границу).
+        pts = [(float(x), float(y)) for x, y in pts]
+        if marker and len(pts) >= 2:
+            (x1, y1), (x2, y2) = pts[-2], pts[-1]
+            dx, dy = x2 - x1, y2 - y1
+            dist = (dx * dx + dy * dy) ** 0.5 or 1.0
+            pts[-1] = (x2 - dx / dist * gap, y2 - dy / dist * gap)
         p = ' '.join(f'{x:.1f},{y:.1f}' for x, y in pts)
         d = ' stroke-dasharray="6 5"' if dash else ''
         m = f' marker-end="url(#{marker})"' if marker else ''
