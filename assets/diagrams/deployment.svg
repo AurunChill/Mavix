@@ -1,68 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1020" viewBox="0 0 1560 1020" font-family="Liberation Serif, Times New Roman, serif">
-<rect width="1560" height="1020" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1600" height="1040" fill="#fff"/>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#000"/></marker></defs>
-<rect x="70.0" y="150.0" width="300.0" height="150.0" stroke="#000" fill="none" stroke-width="1.6"/>
-<text x="220.0" y="176.0" text-anchor="middle" font-size="16" font-weight="bold">ПК администратора</text>
-<rect x="95.0" y="205.0" width="250.0" height="75.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="220.0" y="238.5" text-anchor="middle" font-size="15" font-weight="bold">Браузер</text>
-<text x="220.0" y="258.5" text-anchor="middle" font-size="14" font-style="italic">(MavixWeb UI)</text>
-<rect x="500.0" y="110.0" width="480.0" height="280.0" stroke="#000" fill="none" stroke-width="1.6"/>
-<text x="740.0" y="136.0" text-anchor="middle" font-size="16" font-weight="bold">Сервер VPS — Docker Compose</text>
-<rect x="520.0" y="170.0" width="140.0" height="150.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="590.0" y="232.0" text-anchor="middle" font-size="16" font-weight="bold">MavixServer</text>
-<text x="590.0" y="250.0" text-anchor="middle" font-size="13" font-style="italic">[FastAPI]</text>
-<text x="590.0" y="268.0" text-anchor="middle" font-size="13" font-style="italic">REST·WS</text>
-<rect x="675.0" y="170.0" width="130.0" height="150.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="740.0" y="232.0" text-anchor="middle" font-size="16" font-weight="bold">MavixWeb</text>
-<text x="740.0" y="250.0" text-anchor="middle" font-size="13" font-style="italic">[Express]</text>
-<text x="740.0" y="268.0" text-anchor="middle" font-size="13" font-style="italic">статика</text>
-<rect x="820.0" y="170.0" width="140.0" height="150.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="890.0" y="232.0" text-anchor="middle" font-size="16" font-weight="bold">PostgreSQL</text>
-<text x="890.0" y="250.0" text-anchor="middle" font-size="13" font-style="italic">[СУБД]</text>
-<text x="890.0" y="268.0" text-anchor="middle" font-size="13" font-style="italic">тома</text>
-<rect x="1100.0" y="130.0" width="380.0" height="360.0" stroke="#000" fill="none" stroke-width="1.6"/>
-<text x="1290.0" y="156.0" text-anchor="middle" font-size="16" font-weight="bold">ПК оператора</text>
-<rect x="1125.0" y="185.0" width="330.0" height="90.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="1290.0" y="226.0" text-anchor="middle" font-size="16" font-weight="bold">MavixDesktop</text>
-<text x="1290.0" y="246.0" text-anchor="middle" font-size="14" font-style="italic">[PySide6, aiortc]</text>
-<rect x="1125.0" y="295.0" width="330.0" height="80.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="1290.0" y="331.0" text-anchor="middle" font-size="15" font-weight="bold">QGroundControl</text>
-<text x="1290.0" y="351.0" text-anchor="middle" font-size="14" font-style="italic">(MAVLink-полёт)</text>
-<rect x="1125.0" y="395.0" width="330.0" height="70.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="1290.0" y="435.0" text-anchor="middle" font-size="15" font-weight="bold">Джойстик (USB)</text>
-<rect x="500.0" y="650.0" width="480.0" height="290.0" stroke="#000" fill="none" stroke-width="1.6"/>
-<text x="740.0" y="676.0" text-anchor="middle" font-size="16" font-weight="bold">Дрон — Raspberry Pi (Ubuntu)</text>
-<rect x="520.0" y="705.0" width="250.0" height="100.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="645.0" y="742.0" text-anchor="middle" font-size="16" font-weight="bold">MavixBoard</text>
-<text x="645.0" y="760.0" text-anchor="middle" font-size="13" font-style="italic">[GStreamer, Python]</text>
-<text x="645.0" y="778.0" text-anchor="middle" font-size="13" font-style="italic">WebRTC-борт</text>
-<rect x="800.0" y="705.0" width="160.0" height="100.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="880.0" y="742.0" text-anchor="middle" font-size="16" font-weight="bold">Полётный</text>
-<text x="880.0" y="760.0" text-anchor="middle" font-size="13" font-style="italic">контроллер</text>
-<text x="880.0" y="778.0" text-anchor="middle" font-size="13" font-style="italic">PX4 / Betaflight</text>
-<rect x="520.0" y="825.0" width="250.0" height="80.0" stroke="#000" fill="none" stroke-width="1.1"/>
-<text x="645.0" y="861.0" text-anchor="middle" font-size="15" font-weight="bold">Камеры</text>
-<text x="645.0" y="881.0" text-anchor="middle" font-size="14" font-style="italic">USB / CSI</text>
-<polyline points="370.0,242.0 486.0,242.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="486.0,242.0 474.0,247.0 474.0,237.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<text x="435.0" y="232.0" text-anchor="middle" font-size="13" >HTTPS</text>
-<polyline points="1100.0,230.0 994.0,230.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="994.0,230.0 1006.0,225.0 1006.0,235.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<text x="1040.0" y="220.0" text-anchor="middle" font-size="13" >HTTPS + WSS</text>
-<polyline points="560.0,705.0 560.0,404.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="560.0,404.0 565.0,416.0 555.0,416.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<text x="572.0" y="540.0" text-anchor="start" font-size="13" >WSS-сигналинг + enrollment</text>
-<polyline points="1250.0,490.0 1250.0,790.0 994.0,790.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="994.0,790.0 1006.0,785.0 1006.0,795.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<polyline points="980.0,770.0 1230.0,770.0 1230.0,504.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="1230.0,504.0 1235.0,516.0 1225.0,516.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<text x="1245.0" y="700.0" text-anchor="start" font-size="13" >WebRTC P2P</text>
-<text x="1245.0" y="718.0" text-anchor="start" font-size="13" >(видео + data)</text>
-<polyline points="770.0,755.0 786.0,755.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="786.0,755.0 774.0,760.0 774.0,750.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<text x="785.0" y="745.0" text-anchor="middle" font-size="12" >UART</text>
-<polyline points="645.0,805.0 645.0,811.0" stroke="#000" fill="none" stroke-width="0.9"/>
-<polygon points="645.0,811.0 640.0,799.0 650.0,799.0" fill="#000" stroke="#000" stroke-width="0.6"/>
-<text x="657.0" y="820.0" text-anchor="start" font-size="12" >USB/CSI</text>
-<text x="780.0" y="998" text-anchor="middle" font-style="italic" font-size="17">Рисунок 6 – Диаграмма развёртывания (Deployment) системы Mavix</text>
+<rect x="70.0" y="170.0" width="250.0" height="130.0" stroke="#000" fill="none" stroke-width="1.5"/>
+<polygon points="70,170 86,154 336,154 320,170" fill="none" stroke="#000" stroke-width="1.5"/>
+<polygon points="320,170 336,154 336,284 320,300" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="195.0" y="187.0" text-anchor="middle" font-size="11" font-style="italic">«device»</text>
+<text x="195.0" y="205.0" text-anchor="middle" font-size="15" font-weight="bold">ПК администратора</text>
+<rect x="92.0" y="225.0" width="206.0" height="65.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="195.0" y="240.0" text-anchor="middle" font-size="10" font-style="italic">«execution env»</text>
+<text x="195.0" y="261.5" text-anchor="middle" font-size="13.5" font-weight="bold">Браузер</text>
+<text x="195.0" y="278.5" text-anchor="middle" font-size="11.5" font-style="italic">MavixWeb UI</text>
+<rect x="500.0" y="130.0" width="480.0" height="270.0" stroke="#000" fill="none" stroke-width="1.5"/>
+<polygon points="500,130 516,114 996,114 980,130" fill="none" stroke="#000" stroke-width="1.5"/>
+<polygon points="980,130 996,114 996,384 980,400" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="740.0" y="147.0" text-anchor="middle" font-size="11" font-style="italic">«device»</text>
+<text x="740.0" y="165.0" text-anchor="middle" font-size="15" font-weight="bold">Сервер VPS</text>
+<text x="740.0" y="178.0" text-anchor="middle" font-size="11" font-style="italic">«executionEnvironment» Docker Compose</text>
+<rect x="520.0" y="195.0" width="140.0" height="145.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="590.0" y="210.0" text-anchor="middle" font-size="10" font-style="italic">«artifact»</text>
+<text x="590.0" y="271.5" text-anchor="middle" font-size="13.5" font-weight="bold">MavixServer</text>
+<text x="590.0" y="288.5" text-anchor="middle" font-size="11.5" font-style="italic">[FastAPI]</text>
+<rect x="672.0" y="195.0" width="130.0" height="145.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="737.0" y="210.0" text-anchor="middle" font-size="10" font-style="italic">«artifact»</text>
+<text x="737.0" y="271.5" text-anchor="middle" font-size="13.5" font-weight="bold">MavixWeb</text>
+<text x="737.0" y="288.5" text-anchor="middle" font-size="11.5" font-style="italic">[Express]</text>
+<rect x="816.0" y="195.0" width="144.0" height="145.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="888.0" y="210.0" text-anchor="middle" font-size="10" font-style="italic">«artifact»</text>
+<text x="888.0" y="271.5" text-anchor="middle" font-size="13.5" font-weight="bold">PostgreSQL</text>
+<text x="888.0" y="288.5" text-anchor="middle" font-size="11.5" font-style="italic">[СУБД]</text>
+<rect x="1110.0" y="150.0" width="370.0" height="360.0" stroke="#000" fill="none" stroke-width="1.5"/>
+<polygon points="1110,150 1126,134 1496,134 1480,150" fill="none" stroke="#000" stroke-width="1.5"/>
+<polygon points="1480,150 1496,134 1496,494 1480,510" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="1295.0" y="167.0" text-anchor="middle" font-size="11" font-style="italic">«device»</text>
+<text x="1295.0" y="185.0" text-anchor="middle" font-size="15" font-weight="bold">ПК оператора</text>
+<rect x="1132.0" y="205.0" width="326.0" height="85.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="1295.0" y="220.0" text-anchor="middle" font-size="10" font-style="italic">«artifact»</text>
+<text x="1295.0" y="251.5" text-anchor="middle" font-size="13.5" font-weight="bold">MavixDesktop</text>
+<text x="1295.0" y="268.5" text-anchor="middle" font-size="11.5" font-style="italic">[PySide6, aiortc]</text>
+<rect x="1132.0" y="300.0" width="326.0" height="75.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="1295.0" y="315.0" text-anchor="middle" font-size="10" font-style="italic">«artifact»</text>
+<text x="1295.0" y="341.5" text-anchor="middle" font-size="13.5" font-weight="bold">QGroundControl</text>
+<text x="1295.0" y="358.5" text-anchor="middle" font-size="11.5" font-style="italic">MAVLink-полёт</text>
+<rect x="1132.0" y="395.0" width="326.0" height="60.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="1295.0" y="410.0" text-anchor="middle" font-size="10" font-style="italic">«device»</text>
+<text x="1295.0" y="429.0" text-anchor="middle" font-size="13.5" font-weight="bold">Джойстик</text>
+<text x="1295.0" y="446.0" text-anchor="middle" font-size="11.5" font-style="italic">USB</text>
+<rect x="500.0" y="690.0" width="480.0" height="280.0" stroke="#000" fill="none" stroke-width="1.5"/>
+<polygon points="500,690 516,674 996,674 980,690" fill="none" stroke="#000" stroke-width="1.5"/>
+<polygon points="980,690 996,674 996,954 980,970" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="740.0" y="707.0" text-anchor="middle" font-size="11" font-style="italic">«device»</text>
+<text x="740.0" y="725.0" text-anchor="middle" font-size="15" font-weight="bold">Дрон — Raspberry Pi (Ubuntu)</text>
+<rect x="520.0" y="748.0" width="250.0" height="100.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="645.0" y="763.0" text-anchor="middle" font-size="10" font-style="italic">«artifact»</text>
+<text x="645.0" y="802.0" text-anchor="middle" font-size="13.5" font-weight="bold">MavixBoard</text>
+<text x="645.0" y="819.0" text-anchor="middle" font-size="11.5" font-style="italic">[GStreamer, Python]</text>
+<rect x="800.0" y="748.0" width="160.0" height="100.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="880.0" y="763.0" text-anchor="middle" font-size="10" font-style="italic">«device»</text>
+<text x="880.0" y="802.0" text-anchor="middle" font-size="13.5" font-weight="bold">Полётный контр.</text>
+<text x="880.0" y="819.0" text-anchor="middle" font-size="11.5" font-style="italic">PX4 / Betaflight</text>
+<rect x="520.0" y="868.0" width="250.0" height="70.0" stroke="#000" fill="none" stroke-width="1.1"/>
+<text x="645.0" y="883.0" text-anchor="middle" font-size="10" font-style="italic">«device»</text>
+<text x="645.0" y="907.0" text-anchor="middle" font-size="13.5" font-weight="bold">Камеры</text>
+<text x="645.0" y="924.0" text-anchor="middle" font-size="11.5" font-style="italic">USB / CSI</text>
+<polyline points="320.0,250.0 486.0,250.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="486.0,250.0 474.0,255.0 474.0,245.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="410.0" y="240.0" text-anchor="middle" font-size="12" >«HTTPS»</text>
+<polyline points="1110.0,250.0 1010.0,250.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1010.0,250.0 1022.0,245.0 1022.0,255.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="1053.0" y="240.0" text-anchor="middle" font-size="12" >«HTTPS / WSS»</text>
+<polyline points="560.0,748.0 560.0,414.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="560.0,414.0 565.0,426.0 555.0,426.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="572.0" y="560.0" text-anchor="start" font-size="12" >«WSS» сигналинг + enrollment</text>
+<polyline points="1250.0,510.0 1250.0,820.0 1010.0,820.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1010.0,820.0 1022.0,815.0 1022.0,825.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="996.0,800.0 1230.0,800.0 1230.0,524.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1230.0,524.0 1235.0,536.0 1225.0,536.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="1245.0" y="660.0" text-anchor="start" font-size="12" >«WebRTC»</text>
+<text x="1245.0" y="678.0" text-anchor="start" font-size="12" >видео + data</text>
+<polyline points="770.0,798.0 786.0,798.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="786.0,798.0 774.0,803.0 774.0,793.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="785.0" y="788.0" text-anchor="middle" font-size="11" >«UART»</text>
+<polyline points="645.0,848.0 645.0,854.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="645.0,854.0 640.0,842.0 650.0,842.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="657.0" y="862.0" text-anchor="start" font-size="11" >«USB/CSI»</text>
+<text x="800.0" y="1018" text-anchor="middle" font-style="italic" font-size="17">Рисунок 6 – Диаграмма развёртывания (Deployment) системы Mavix</text>
 </svg>

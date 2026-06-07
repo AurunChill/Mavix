@@ -124,6 +124,26 @@ class Canvas:
             self.text(x + w / 2, y0 + i * 18, ln, fs=(16 if i == 0 else 13),
                       bold=(i == 0), italic=(i > 0))
 
+    def node3d(self, x, y, w, h, title, stereo='device', d=16) -> None:
+        """UML-узел развёртывания — 3D-коробка со стереотипом сверху."""
+        self.rect(x, y, w, h, sw=1.5)
+        self.add(f'<polygon points="{x:.0f},{y:.0f} {x+d:.0f},{y-d:.0f} '
+                 f'{x+w+d:.0f},{y-d:.0f} {x+w:.0f},{y:.0f}" fill="none" stroke="#000" stroke-width="1.5"/>')
+        self.add(f'<polygon points="{x+w:.0f},{y:.0f} {x+w+d:.0f},{y-d:.0f} '
+                 f'{x+w+d:.0f},{y+h-d:.0f} {x+w:.0f},{y+h:.0f}" fill="none" stroke="#000" stroke-width="1.5"/>')
+        self.text(x + w / 2, y + 17, f'«{stereo}»', fs=11, italic=True)
+        self.text(x + w / 2, y + 35, title, fs=15, bold=True)
+
+    def artifact(self, x, y, w, h, title, sub=None, stereo='artifact') -> None:
+        """UML-артефакт (или вложенный узел) — прямоугольник со стереотипом."""
+        self.rect(x, y, w, h, sw=1.1)
+        self.text(x + w / 2, y + 15, f'«{stereo}»', fs=10, italic=True)
+        if sub:
+            self.text(x + w / 2, y + h / 2 + 4, title, fs=13.5, bold=True)
+            self.text(x + w / 2, y + h / 2 + 21, sub, fs=11.5, italic=True)
+        else:
+            self.text(x + w / 2, y + h / 2 + 9, title, fs=13.5, bold=True)
+
     def actor(self, cx, top, name) -> None:
         """Stick-figure актор; name под фигурой (может быть list из 2 строк)."""
         r = 11
