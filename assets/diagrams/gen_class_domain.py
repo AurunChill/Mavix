@@ -58,29 +58,29 @@ g_de = uml_class(c, 560, 560, 400, 'Delivery', [
 g_st = uml_class(c, 1090, 840, 320, 'DeliveryStatus', [
     'OFFERED', 'ACCEPTED', 'IN_FLIGHT', 'DELIVERED', 'CANCELLED'], 'enumeration')
 
-# --- композиции Admin ◆—> (cascade delete) ------------------------------------
-# Admin -> Operator
-c.poly([(g_ad.left, 150), (350, 150), (350, g_op.top)], marker='arr')
-diamond(c, g_ad.left, 150, -1, 0)
+# --- композиции Admin ◆—— (filled diamond у целого, БЕЗ наконечника) ----------
+# Admin —◆ Operator
+c.poly([(g_ad.left, 150), (350, 150), (350, g_op.top)])
+c.diamond(g_ad.left, 150, -1, 0, filled=True)
 c.text(360, 142, '1', fs=12, anchor='start')
 c.text(335, g_op.top - 8, '1..*', fs=12, anchor='end')
-# Admin -> Drone
-c.poly([(g_ad.right, 150), (1245, 150), (1245, g_dr.top)], marker='arr')
-diamond(c, g_ad.right, 150, 1, 0)
+# Admin —◆ Drone
+c.poly([(g_ad.right, 150), (1245, 150), (1245, g_dr.top)])
+c.diamond(g_ad.right, 150, 1, 0, filled=True)
 c.text(1160, 142, '1', fs=12, anchor='end')
 c.text(1255, g_dr.top - 8, '1..*', fs=12, anchor='start')
-# Admin -> Delivery
-c.poly([(g_ad.cx, g_ad.bottom), (g_ad.cx, g_de.top)], marker='arr')
-diamond(c, g_ad.cx, g_ad.bottom, 0, 1)
+# Admin —◆ Delivery
+c.poly([(g_ad.cx, g_ad.bottom), (g_ad.cx, g_de.top)])
+c.diamond(g_ad.cx, g_ad.bottom, 0, 1, filled=True)
 c.text(g_ad.cx + 10, g_ad.bottom + 26, '1', fs=12, anchor='start')
 c.text(g_ad.cx + 10, g_de.top - 8, '1..*', fs=12, anchor='start')
-# --- ассоциации (SET NULL) ----------------------------------------------------
-# Operator -> Delivery
-c.poly([(g_op.right, 660), (g_de.left, 660)], marker='arr')
+# --- ассоциации (SET NULL): простая линия + кратности, без наконечника --------
+# Operator — Delivery
+c.poly([(g_op.right, 660), (g_de.left, 660)])
 c.text(g_op.right + 8, 652, '1', fs=12, anchor='start')
 c.text(g_de.left - 8, 652, '0..*', fs=12, anchor='end')
-# Drone -> Delivery
-c.poly([(g_dr.left, 640), (g_de.right, 640)], marker='arr')
+# Drone — Delivery
+c.poly([(g_dr.left, 640), (g_de.right, 640)])
 c.text(g_dr.left - 8, 632, '1', fs=12, anchor='end')
 c.text(g_de.right + 8, 632, '0..*', fs=12, anchor='start')
 # Delivery ··> DeliveryStatus (зависимость) — заходим в ВЕРХ таблицы, не вдоль грани

@@ -62,7 +62,28 @@ class Canvas:
             self.add(f'<polygon points="{x:.1f},{y:.1f} {p1[0]:.1f},{p1[1]:.1f} '
                      f'{p2[0]:.1f},{p2[1]:.1f}" fill="#000" stroke="#000" stroke-width="0.6"/>')
 
-    def poly(self, pts, sw=0.9, marker=None, dash=False, gap=10) -> None:
+    def hollow_triangle(self, x, y, dx, dy) -> None:
+        """Полый треугольник UML (обобщение/реализация) у родителя/интерфейса."""
+        a = math.atan2(dy, dx)
+        L, W = 15.0, 7.0
+        bx, by = x - L * math.cos(a), y - L * math.sin(a)
+        nx, ny = -math.sin(a) * W, math.cos(a) * W
+        self.add(f'<polygon points="{x:.1f},{y:.1f} {bx+nx:.1f},{by+ny:.1f} '
+                 f'{bx-nx:.1f},{by-ny:.1f}" fill="#fff" stroke="#000" stroke-width="1.0"/>')
+
+    def diamond(self, x, y, dx, dy, filled=True) -> None:
+        """Ромб UML: filled — композиция, hollow — агрегация. У «целого»."""
+        a = math.atan2(dy, dx)
+        L, W = 9.0, 6.0
+        tx, ty = x + L * math.cos(a), y + L * math.sin(a)          # дальняя вершина
+        nx, ny = -math.sin(a) * W, math.cos(a) * W
+        s1 = (x + L / 2 * math.cos(a) + nx, y + L / 2 * math.sin(a) + ny)
+        s2 = (x + L / 2 * math.cos(a) - nx, y + L / 2 * math.sin(a) - ny)
+        fill = '#000' if filled else '#fff'
+        self.add(f'<polygon points="{x:.1f},{y:.1f} {s1[0]:.1f},{s1[1]:.1f} '
+                 f'{tx:.1f},{ty:.1f} {s2[0]:.1f},{s2[1]:.1f}" fill="{fill}" stroke="#000" stroke-width="1.0"/>')
+
+    def poly(self, pts, sw=0.9, marker=None, dash=False, gap=14) -> None:
         # Наконечник рисуем САМИ полигоном со СДВИГОМ на gap наружу от цели —
         # стрелка стоит снаружи блока с отступом, не сливается с границей.
         pts = [(float(x), float(y)) for x, y in pts]

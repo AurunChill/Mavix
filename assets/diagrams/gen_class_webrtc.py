@@ -59,21 +59,21 @@ g_dc = uml_class(c, 1040, 800, 380, 'DataChannelHub', [
     ['+ close()'])
 
 # --- связи --------------------------------------------------------------------
-# Coord ◆— Manager
-c.poly([(g_co.cx, g_co.bottom), (g_co.cx, g_mg.top)], marker='arr')
-diamond(c, g_co.cx, g_co.bottom, 0, 1)
-# Coord ◆— GStreamerPipe
-c.poly([(g_co.right, 175), (g_gp.left, 175)], marker='arr')
-diamond(c, g_co.right, 175, 1, 0)
-# Coord —> FCService (внедрён)
-c.poly([(g_co.left, 200), (g_fc.right, 200)], marker='arr')
+# Coord ◆—— Manager (композиция: ромб у целого, без наконечника)
+c.poly([(g_co.cx, g_co.bottom), (g_co.cx, g_mg.top)])
+c.diamond(g_co.cx, g_co.bottom, 0, 1, filled=True)
+# Coord ◆—— GStreamerPipe
+c.poly([(g_co.right, 175), (g_gp.left, 175)])
+c.diamond(g_co.right, 175, 1, 0, filled=True)
+# Coord ——▷ FCService (навигируемая ассоциация: внедрён извне, не владеет)
+c.poly([(g_co.left, 200), (g_fc.right, 200)], marker='open')
 c.text((g_co.left + g_fc.right) / 2, 192, 'fc_service', fs=12)
-# Manager ◆— PeerSession
-c.poly([(g_mg.left + 60, g_mg.bottom), (g_mg.left + 60, 760), (g_pe.cx, 760), (g_pe.cx, g_pe.top)], marker='arr')
-diamond(c, g_mg.left + 60, g_mg.bottom, 0, 1)
-# Manager ◆— DataChannelHub
-c.poly([(g_mg.right - 60, g_mg.bottom), (g_mg.right - 60, 760), (g_dc.cx, 760), (g_dc.cx, g_dc.top)], marker='arr')
-diamond(c, g_mg.right - 60, g_mg.bottom, 0, 1)
+# Manager ◆—— PeerSession
+c.poly([(g_mg.left + 60, g_mg.bottom), (g_mg.left + 60, 760), (g_pe.cx, 760), (g_pe.cx, g_pe.top)])
+c.diamond(g_mg.left + 60, g_mg.bottom, 0, 1, filled=True)
+# Manager ◆—— DataChannelHub
+c.poly([(g_mg.right - 60, g_mg.bottom), (g_mg.right - 60, 760), (g_dc.cx, 760), (g_dc.cx, g_dc.top)])
+c.diamond(g_mg.right - 60, g_mg.bottom, 0, 1, filled=True)
 
 out = pathlib.Path(__file__).parent / 'class_webrtc.svg'
 out.write_text(c.svg('Рисунок 8 – Диаграмма классов WebRTC-слоя MavixBoard'), encoding='utf-8')
