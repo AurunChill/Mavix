@@ -39,8 +39,8 @@ for ex, name, sub in ext:
 c.poly([(230, 165), (sx_cx - 60, 165), (sx_cx - 60, SY)], marker='arr')
 c.text(300, 150, 'HTTPS: операторы, дроны, заявки', fs=14, anchor='start')
 c.poly([(1270, 165), (sx_cx + 60, 165), (sx_cx + 60, SY)], marker='arr')
-c.text(1248, 132, 'Веб/Desktop: приём заявок,', fs=14, anchor='end')
-c.text(1248, 150, 'видео + телеметрия (WebRTC)', fs=14, anchor='end')
+c.text(1248, 132, 'Веб/Desktop: приём заявок, видео +', fs=14, anchor='end')
+c.text(1248, 150, 'телеметрия + команды (CRSF/MAVLink)', fs=14, anchor='end')
 
 # Связи системы с внешними (вниз)
 labels = {
@@ -56,7 +56,7 @@ for name in ('SMTP-сервер', 'STUN / TURN', 'Nominatim'):
 # Оператор ↔ QGroundControl
 qx, qy = ext_geom['QGroundControl']
 c.poly([(1320, 218), (1320, 690), (qx, 690), (qx, qy)], marker='arr')
-c.text(qx + 16, 700, 'ручной MAVLink-полёт', fs=13, anchor='start')
+c.text(qx + 16, 700, 'MAVLink-полёт (опц.)', fs=13, anchor='start')
 
 out = pathlib.Path(__file__).parent / 'c4_context.svg'
 out.write_text(c.svg('Рисунок 2 – Контекстная диаграмма (C4 Level 1) системы Mavix'), encoding='utf-8')

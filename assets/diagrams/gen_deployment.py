@@ -22,7 +22,7 @@ c.artifact(816, 195, 144, 145, 'PostgreSQL', '[СУБД]')
 # Узел: ПК оператора
 c.node3d(1110, 150, 370, 360, 'ПК оператора', 'device')
 c.artifact(1132, 205, 326, 85, 'MavixDesktop', '[PySide6, aiortc]')
-c.artifact(1132, 300, 326, 75, 'QGroundControl', 'MAVLink-полёт')
+c.artifact(1132, 300, 326, 75, 'QGroundControl', 'MAVLink-полёт (опц.)')
 c.artifact(1132, 395, 326, 60, 'Джойстик', 'USB', stereo='device')
 
 # Узел: Дрон (Raspberry Pi)
@@ -45,7 +45,7 @@ c.text(572, 560, '«WSS» сигналинг + enrollment', fs=12, anchor='start
 c.poly([(1250, 510), (1250, 820), (996, 820)], marker='arr')
 c.poly([(996, 800), (1230, 800), (1230, 510)], marker='arr')
 c.text(1245, 660, '«WebRTC»', fs=12, anchor='start')
-c.text(1245, 678, 'видео + data', fs=12, anchor='start')
+c.text(1245, 678, 'видео + команды', fs=12, anchor='start')
 # MavixBoard — FC
 c.poly([(770, 798), (800, 798)], marker='arr')
 c.text(785, 788, '«UART»', fs=11)

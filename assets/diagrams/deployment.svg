@@ -40,7 +40,7 @@
 <rect x="1132.0" y="300.0" width="326.0" height="75.0" stroke="#000" fill="none" stroke-width="1.1"/>
 <text x="1295.0" y="315.0" text-anchor="middle" font-size="10" font-style="italic">«artifact»</text>
 <text x="1295.0" y="341.5" text-anchor="middle" font-size="13.5" font-weight="bold">QGroundControl</text>
-<text x="1295.0" y="358.5" text-anchor="middle" font-size="11.5" font-style="italic">MAVLink-полёт</text>
+<text x="1295.0" y="358.5" text-anchor="middle" font-size="11.5" font-style="italic">MAVLink-полёт (опц.)</text>
 <rect x="1132.0" y="395.0" width="326.0" height="60.0" stroke="#000" fill="none" stroke-width="1.1"/>
 <text x="1295.0" y="410.0" text-anchor="middle" font-size="10" font-style="italic">«device»</text>
 <text x="1295.0" y="429.0" text-anchor="middle" font-size="13.5" font-weight="bold">Джойстик</text>
@@ -76,7 +76,7 @@
 <polyline points="996.0,800.0 1230.0,800.0 1230.0,524.0" stroke="#000" fill="none" stroke-width="0.9"/>
 <polygon points="1230.0,524.0 1235.0,536.0 1225.0,536.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="1245.0" y="660.0" text-anchor="start" font-size="12" >«WebRTC»</text>
-<text x="1245.0" y="678.0" text-anchor="start" font-size="12" >видео + data</text>
+<text x="1245.0" y="678.0" text-anchor="start" font-size="12" >видео + команды</text>
 <polyline points="770.0,798.0 786.0,798.0" stroke="#000" fill="none" stroke-width="0.9"/>
 <polygon points="786.0,798.0 774.0,803.0 774.0,793.0" fill="#000" stroke="#000" stroke-width="0.6"/>
 <text x="785.0" y="788.0" text-anchor="middle" font-size="11" >«UART»</text>
