@@ -50,15 +50,15 @@ Mavix — программный комплекс для доставки мал
   совместимости aiortc ↔ webrtcbin и TURN/ICE.
 - **Принципы (SOLID / DRY / KISS / YAGNI)** — в разделе «Принципы проектирования»
   файла `TECHNICAL.md` каждого репозитория (примеры из кода соответствующего компонента).
-- **Развёртывание:** [DEPLOYMENT.md](DEPLOYMENT.md), [BUILD.md](BUILD.md),
-  скрипты сборки и отправки — [`StartUp/build`](StartUp/build/).
+- **Развёртывание:** [ForServer/Main/README.md](ForServer/Main/README.md)
+  (docker compose, Caddy, env, дистрибутивы клиентов); сборка — `StartUp/build_*.sh`
+  и [`StartUp/build`](StartUp/build/) (сборка + отправка на сервер).
 - **Диаграммы (ВКР):** [`assets/diagrams`](assets/diagrams/) — ER, C4
   (Context/Container/Component), Use Case, Deployment (UML, 3D-узлы), Class ×2,
   Sequence ×2, **Activity** (деятельность), **IDEF0**, **DFD** (исходники `*.svg`
   + готовые `png/*.png`).
   Правила оформления — `RULES.md`, промпт генерации — `PROMPT.md`. Относящиеся
   диаграммы также вложены в каждый репозиторий (`<repo>/assets/diagrams`).
-- **План работ:** [PLAN.md](PLAN.md).
 
 ## Запуск (локально, кратко)
 
@@ -70,7 +70,7 @@ cd StartUp
 ./start_desktop.sh   # MavixDesktop (оператор)
 ./start_board.sh     # MavixBoard (на дроне/RPi)
 ```
-Полная инструкция (порядок, `.env`, Docker) — [DEPLOYMENT.md](DEPLOYMENT.md).
+Полная инструкция (порядок, `.env`, Docker) — [ForServer/Main/README.md](ForServer/Main/README.md).
 
 ## Тесты
 В каждом репозитории — свой набор (pytest для Python, Jest для web), все зелёные.
