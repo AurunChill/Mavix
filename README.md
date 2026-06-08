@@ -48,8 +48,8 @@ Mavix — программный комплекс для доставки мал
   — Raspberry Pi, полётные контроллеры, UART и права на порты;
   [MavixBoard/WEBRTC_TURN_NOTES.md](MavixBoard/WEBRTC_TURN_NOTES.md) — разбор
   совместимости aiortc ↔ webrtcbin и TURN/ICE.
-- **Принципы:** [PRINCIPLES.md](PRINCIPLES.md) — SOLID / DRY / KISS / YAGNI с
-  примерами кода.
+- **Принципы (SOLID / DRY / KISS / YAGNI)** — в разделе «Принципы проектирования»
+  файла `TECHNICAL.md` каждого репозитория (примеры из кода соответствующего компонента).
 - **Развёртывание:** [DEPLOYMENT.md](DEPLOYMENT.md), [BUILD.md](BUILD.md),
   скрипты сборки и отправки — [`StartUp/build`](StartUp/build/).
 - **Диаграммы (ВКР):** [`assets/diagrams`](assets/diagrams/) — ER, C4
