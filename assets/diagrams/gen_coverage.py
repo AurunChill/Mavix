@@ -19,8 +19,8 @@ for pct in range(0, 101, 20):
 c.text(X0 - 44, Y0 - H / 2, '%', fs=13, anchor='middle')
 
 bars = [('MavixBoard', 81, '299 тестов'),
-        ('MavixDesktop', 53, '244 теста'),
-        ('MavixServer', 61, '341 тест')]
+        ('MavixDesktop', 72, '281 тест'),
+        ('MavixServer', 80, '341 тест')]
 bw, gap = 130, 80
 x = X0 + 70
 for name, pct, sub in bars:

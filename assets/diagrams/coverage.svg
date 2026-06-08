@@ -20,12 +20,12 @@
 <text x="285.0" y="182.0" text-anchor="middle" font-size="15" font-weight="bold">81%</text>
 <text x="285.0" y="544.0" text-anchor="middle" font-size="13" >MavixBoard</text>
 <text x="285.0" y="564.0" text-anchor="middle" font-size="11.5" font-style="italic">299 тестов</text>
-<rect x="430.0" y="308.0" width="130.0" height="212.0" stroke="#000" fill="none" stroke-width="1.2"/>
-<text x="495.0" y="294.0" text-anchor="middle" font-size="15" font-weight="bold">53%</text>
+<rect x="430.0" y="232.0" width="130.0" height="288.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="495.0" y="218.0" text-anchor="middle" font-size="15" font-weight="bold">72%</text>
 <text x="495.0" y="544.0" text-anchor="middle" font-size="13" >MavixDesktop</text>
-<text x="495.0" y="564.0" text-anchor="middle" font-size="11.5" font-style="italic">244 теста</text>
-<rect x="640.0" y="276.0" width="130.0" height="244.0" stroke="#000" fill="none" stroke-width="1.2"/>
-<text x="705.0" y="262.0" text-anchor="middle" font-size="15" font-weight="bold">61%</text>
+<text x="495.0" y="564.0" text-anchor="middle" font-size="11.5" font-style="italic">281 тест</text>
+<rect x="640.0" y="200.0" width="130.0" height="320.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="705.0" y="186.0" text-anchor="middle" font-size="15" font-weight="bold">80%</text>
 <text x="705.0" y="544.0" text-anchor="middle" font-size="13" >MavixServer</text>
 <text x="705.0" y="564.0" text-anchor="middle" font-size="11.5" font-style="italic">341 тест</text>
 <text x="450.0" y="598" text-anchor="middle" font-style="italic" font-size="17">Рисунок — Покрытие кода тестами по компонентам</text>
