@@ -53,8 +53,10 @@ Mavix — программный комплекс для доставки мал
 - **Развёртывание:** [DEPLOYMENT.md](DEPLOYMENT.md), [BUILD.md](BUILD.md),
   скрипты сборки и отправки — [`StartUp/build`](StartUp/build/).
 - **Диаграммы (ВКР):** [`assets/diagrams`](assets/diagrams/) — ER, C4
-  (Context/Container/Component), Use Case, Deployment, Class, Sequence
-  (исходники `*.svg` + готовые `png/*.png`, см. `RULES.md`).
+  (Context/Container/Component), Use Case, Deployment (UML, 3D-узлы), Class ×2,
+  Sequence ×2, **IDEF0**, **DFD** (исходники `*.svg` + готовые `png/*.png`).
+  Правила оформления — `RULES.md`, промпт генерации — `PROMPT.md`. Относящиеся
+  диаграммы также вложены в каждый репозиторий (`<repo>/assets/diagrams`).
 - **План работ:** [PLAN.md](PLAN.md).
 
 ## Запуск (локально, кратко)
