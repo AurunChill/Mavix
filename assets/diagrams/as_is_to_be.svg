@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="760" viewBox="0 0 1720 760" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1720" height="760" fill="#fff"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#000"/></marker></defs>
+<text x="60.0" y="124.0" text-anchor="start" font-size="16" font-weight="bold">AS-IS — текущий процесс (курьер)</text>
+<rect x="90.0" y="150.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="215.0" y="189.0" text-anchor="middle" font-size="16" font-weight="bold">Срочная заявка</text>
+<text x="215.0" y="207.0" text-anchor="middle" font-size="13" font-style="italic">лаборатории</text>
+<rect x="402.0" y="150.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="527.0" y="189.0" text-anchor="middle" font-size="16" font-weight="bold">Вызов курьера</text>
+<text x="527.0" y="207.0" text-anchor="middle" font-size="13" font-style="italic">или транспорта</text>
+<rect x="714.0" y="150.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="839.0" y="189.0" text-anchor="middle" font-size="16" font-weight="bold">Ожидание</text>
+<text x="839.0" y="207.0" text-anchor="middle" font-size="13" font-style="italic">курьера ~30 мин</text>
+<rect x="1026.0" y="150.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1151.0" y="189.0" text-anchor="middle" font-size="16" font-weight="bold">Доставка по городу</text>
+<text x="1151.0" y="207.0" text-anchor="middle" font-size="13" font-style="italic">40–90 мин, трафик</text>
+<rect x="1338.0" y="150.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1463.0" y="189.0" text-anchor="middle" font-size="16" font-weight="bold">Получение</text>
+<text x="1463.0" y="207.0" text-anchor="middle" font-size="13" font-style="italic">в клинике</text>
+<polyline points="340.0,193.0 388.0,193.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="388.0,193.0 376.0,198.0 376.0,188.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="652.0,193.0 700.0,193.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="700.0,193.0 688.0,198.0 688.0,188.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="964.0,193.0 1012.0,193.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1012.0,193.0 1000.0,198.0 1000.0,188.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="1276.0,193.0 1324.0,193.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1324.0,193.0 1312.0,198.0 1312.0,188.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="860.0" y="285.0" text-anchor="middle" font-size="13" font-style="italic">Итого 70–120 мин · зависит от трафика · дорого · человеческий фактор</text>
+<text x="60.0" y="444.0" text-anchor="start" font-size="16" font-weight="bold">TO-BE — аппаратно-программный комплекс на БПЛА</text>
+<rect x="90.0" y="470.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="215.0" y="509.0" text-anchor="middle" font-size="16" font-weight="bold">Заявка на карте</text>
+<text x="215.0" y="527.0" text-anchor="middle" font-size="13" font-style="italic">(администратор)</text>
+<rect x="402.0" y="470.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="527.0" y="509.0" text-anchor="middle" font-size="16" font-weight="bold">Приём оператором</text>
+<text x="527.0" y="527.0" text-anchor="middle" font-size="13" font-style="italic">модель «такси»</text>
+<rect x="714.0" y="470.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="839.0" y="509.0" text-anchor="middle" font-size="16" font-weight="bold">Полёт БПЛА</text>
+<text x="839.0" y="527.0" text-anchor="middle" font-size="13" font-style="italic">по прямой 8–15 мин</text>
+<rect x="1026.0" y="470.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1151.0" y="509.0" text-anchor="middle" font-size="16" font-weight="bold">Сброс груза</text>
+<text x="1151.0" y="527.0" text-anchor="middle" font-size="13" font-style="italic">в точке (AUX)</text>
+<rect x="1338.0" y="470.0" width="250.0" height="86.0" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="1463.0" y="509.0" text-anchor="middle" font-size="16" font-weight="bold">Журнал и</text>
+<text x="1463.0" y="527.0" text-anchor="middle" font-size="13" font-style="italic">уведомление</text>
+<polyline points="340.0,513.0 388.0,513.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="388.0,513.0 376.0,518.0 376.0,508.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="652.0,513.0 700.0,513.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="700.0,513.0 688.0,518.0 688.0,508.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="964.0,513.0 1012.0,513.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1012.0,513.0 1000.0,518.0 1000.0,508.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<polyline points="1276.0,513.0 1324.0,513.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<polygon points="1324.0,513.0 1312.0,518.0 1312.0,508.0" fill="#000" stroke="#000" stroke-width="0.6"/>
+<text x="860.0" y="605.0" text-anchor="middle" font-size="13" font-style="italic">Итого 10–20 мин · не зависит от дорог · видео и телеметрия в реальном времени</text>
+<text x="860.0" y="738" text-anchor="middle" font-style="italic" font-size="17">Рисунок 1 – Процесс срочной доставки: AS-IS и TO-BE</text>
+</svg>
