@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1320" viewBox="0 0 1180 1320" font-family="Liberation Serif, Times New Roman, serif">
+<rect width="1180" height="1320" fill="#fff"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker><marker id="open" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#000"/></marker></defs>
+<circle cx="560" cy="80" r="11" fill="#000"/>
+<rect x="400" y="120" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="153.0" text-anchor="middle" font-size="13.5" >Администратор: создать заявку (дрон, адрес)</text>
+<rect x="400" y="220" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="253.0" text-anchor="middle" font-size="13.5" >Сервер: разослать операторам (offered)</text>
+<rect x="400" y="320" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="353.0" text-anchor="middle" font-size="13.5" >Оператор: принять заявку</text>
+<polygon points="560,384 690,440 560,496 430,440" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="435.0" text-anchor="middle" font-size="12.5" >заявка ещё</text>
+<text x="560.0" y="453.0" text-anchor="middle" font-size="12.5" >offered?</text>
+<circle cx="900" cy="440" r="13" fill="none" stroke="#000" stroke-width="1.3"/>
+<circle cx="900" cy="440" r="6" fill="#000"/>
+<rect x="400" y="540" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="573.0" text-anchor="middle" font-size="13.5" >Сервер: захватить заявку (accepted)</text>
+<rect x="400" y="640" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="673.0" text-anchor="middle" font-size="13.5" >Оператор: подключиться к дрону (WebRTC)</text>
+<rect x="300.0" y="731" width="520" height="8" fill="#000"/>
+<rect x="300" y="775" width="240" height="60" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="420.0" y="801.0" text-anchor="middle" font-size="13.5" >Борт: видео</text>
+<text x="420.0" y="819.0" text-anchor="middle" font-size="13.5" >и телеметрия</text>
+<rect x="620" y="775" width="240" height="60" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="740.0" y="801.0" text-anchor="middle" font-size="13.5" >Оператор:</text>
+<text x="740.0" y="819.0" text-anchor="middle" font-size="13.5" >управление дроном</text>
+<rect x="300.0" y="881" width="520" height="8" fill="#000"/>
+<rect x="400" y="925" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="958.0" text-anchor="middle" font-size="13.5" >Оператор: сброс груза у точки</text>
+<rect x="400" y="1025" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="1058.0" text-anchor="middle" font-size="13.5" >Борт: исполнить сброс (AUX-канал)</text>
+<rect x="400" y="1125" width="320" height="56" rx="16" ry="16" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="560.0" y="1158.0" text-anchor="middle" font-size="13.5" >Сервер: отметить delivered, уведомить</text>
+<circle cx="560" cy="1235" r="13" fill="none" stroke="#000" stroke-width="1.3"/>
+<circle cx="560" cy="1235" r="6" fill="#000"/>
+<polyline points="560.0,91.0 560.0,106.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="94.0" x2="560.0" y2="106.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="94.0" x2="560.0" y2="106.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,176.0 560.0,206.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="194.0" x2="560.0" y2="206.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="194.0" x2="560.0" y2="206.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,276.0 560.0,306.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="294.0" x2="560.0" y2="306.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="294.0" x2="560.0" y2="306.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,376.0 560.0,370.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="358.0" x2="560.0" y2="370.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="358.0" x2="560.0" y2="370.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="690.0,440.0 873.0,440.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="861.0" y1="445.0" x2="873.0" y2="440.0" stroke="#000" stroke-width="0.9"/>
+<line x1="861.0" y1="435.0" x2="873.0" y2="440.0" stroke="#000" stroke-width="0.9"/>
+<text x="704.0" y="432.0" text-anchor="start" font-size="12" font-style="italic">[нет — забрал другой]</text>
+<polyline points="560.0,496.0 560.0,526.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="514.0" x2="560.0" y2="526.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="514.0" x2="560.0" y2="526.0" stroke="#000" stroke-width="0.9"/>
+<text x="572.0" y="518.0" text-anchor="start" font-size="12" font-style="italic">[да]</text>
+<polyline points="560.0,596.0 560.0,626.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="614.0" x2="560.0" y2="626.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="614.0" x2="560.0" y2="626.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,696.0 560.0,717.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="705.0" x2="560.0" y2="717.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="705.0" x2="560.0" y2="717.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="330.0,739.0 330.0,761.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="325.0" y1="749.0" x2="330.0" y2="761.0" stroke="#000" stroke-width="0.9"/>
+<line x1="335.0" y1="749.0" x2="330.0" y2="761.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="700.0,739.0 700.0,761.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="695.0" y1="749.0" x2="700.0" y2="761.0" stroke="#000" stroke-width="0.9"/>
+<line x1="705.0" y1="749.0" x2="700.0" y2="761.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="420.0,835.0 420.0,867.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="415.0" y1="855.0" x2="420.0" y2="867.0" stroke="#000" stroke-width="0.9"/>
+<line x1="425.0" y1="855.0" x2="420.0" y2="867.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="740.0,835.0 740.0,867.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="735.0" y1="855.0" x2="740.0" y2="867.0" stroke="#000" stroke-width="0.9"/>
+<line x1="745.0" y1="855.0" x2="740.0" y2="867.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,889.0 560.0,911.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="899.0" x2="560.0" y2="911.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="899.0" x2="560.0" y2="911.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,981.0 560.0,1011.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="999.0" x2="560.0" y2="1011.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="999.0" x2="560.0" y2="1011.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,1081.0 560.0,1111.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="1099.0" x2="560.0" y2="1111.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="1099.0" x2="560.0" y2="1111.0" stroke="#000" stroke-width="0.9"/>
+<polyline points="560.0,1181.0 560.0,1208.0" stroke="#000" fill="none" stroke-width="0.9"/>
+<line x1="555.0" y1="1196.0" x2="560.0" y2="1208.0" stroke="#000" stroke-width="0.9"/>
+<line x1="565.0" y1="1196.0" x2="560.0" y2="1208.0" stroke="#000" stroke-width="0.9"/>
+<text x="590.0" y="1298" text-anchor="middle" font-style="italic" font-size="17">Рисунок 13 – Диаграмма деятельности (UML Activity): процесс доставки</text>
+</svg>
