@@ -1,0 +1,16 @@
+[submodule "MavixServer"]
+	path = MavixServer
+	url = https://github.com/AurunChill/MavixServer
+	branch = remote_control
+[submodule "MavixBoard"]
+	path = MavixBoard
+	url = https://github.com/AurunChill/MavixBoard
+	branch = remote_control
+[submodule "MavixWeb"]
+	path = MavixWeb
+	url = https://github.com/dexstronggg/MavixWeb
+	branch = remote_control
+[submodule "MavixDesktop-UI"]
+	path = MavixDesktop-UI
+	url = https://github.com/dexstronggg/MavixDesktop-UI
+	branch = remote_control
