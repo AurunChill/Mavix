@@ -221,3 +221,5 @@ __marimo__/
 
 # Project
 **/info.txt
+# WPS/LibreOffice lock files
+.~*
