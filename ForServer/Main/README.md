@@ -12,6 +12,24 @@
 - `.env` — переменные для compose (`POSTGRES_USER/PASSWORD/DB`).
 - `MavixServer.env`, `MavixWeb.env` — env конкретных сервисов (`env_file`).
 - `.env.example` — образец.
+- `change.sh` — переключение `MavixServer`+`MavixWeb` между ветками
+  `delivery`/`remote` с per-branch снимком БД (см. ниже).
+
+## Переключение веток с сохранением БД (`change.sh`)
+Схемы БД у веток разные (delivery: admins/operators/deliveries; remote: users),
+поэтому при смене ветки БД пересоздаётся. Чтобы не терять данные, скрипт перед
+сбросом снимает дамп текущей ветки, а после переключения подгружает ранее
+сохранённый дамп целевой — у каждой ветки свой снимок в `./dumps/<ветка>.sql`.
+
+```bash
+./change.sh --branch delivery   # → delivery_control (server+web), своя БД
+./change.sh --branch remote     # → remote_control,  своя БД
+# флаги: --no-build (не пересобирать образы), -y (без подтверждения)
+```
+Что делает: поднимает `db` → дамп текущей БД → стоп `app/web/migrator` →
+`git checkout` целевой ветки в `MavixServer` и `MavixWeb` → пересборка образов →
+**drop+create** БД → восстановление дампа целевой ветки (если есть) → подъём
+стека. Дампы (`dumps/`) переживают переключения и в репозиторий не коммитятся.
 
 ## Предварительные требования
 - VPS с Linux, установленные Docker и Docker Compose.

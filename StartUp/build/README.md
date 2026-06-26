@@ -17,4 +17,7 @@
 3. `build_desktop_linux.sh` / `build_desktop_windows.ps1` — обновить приложение
    оператора (если менялся MavixDesktop).
 
-Подробности и ручные команды — в корневом [BUILD.md](../../BUILD.md).
+Ручные команды сборки каждого компонента — в его репозитории:
+`MavixDesktop-UI/scripts/` (`build_appimage.sh` — Linux/.AppImage,
+`build_windows.ps1` — Windows/.exe); сборка wheels борта — `build_board_wheels.sh`
+рядом в этом каталоге.
