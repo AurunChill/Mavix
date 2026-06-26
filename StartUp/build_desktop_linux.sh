@@ -3,7 +3,7 @@
 # Билдить лучше на относительно старом Linux (Ubuntu 22.04/24.04) — бинарь
 # зависит от glibc хоста сборки.
 set -e
-SERVER_IP="85.198.102.188"        # подставь свой IP/домен сервера
+SERVER_IP="85.198.69.77"        # подставь свой IP/домен сервера
 cd "$(dirname "$0")/../MavixDesktop-UI"
 [ -d .venv ] || python3 -m venv .venv
 source .venv/bin/activate

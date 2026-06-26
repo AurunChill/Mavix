@@ -4,7 +4,7 @@
 # (галка "Add Python to PATH"). Если pip ругнётся на "Microsoft Visual C++
 # 14.0 required" — поставить Microsoft C++ Build Tools.
 set -e
-SERVER_IP="85.198.102.188"        # подставь свой IP/домен сервера
+SERVER_IP="85.198.69.77"        # подставь свой IP/домен сервера
 cd "$(dirname "$0")/../MavixDesktop-UI"
 python -m venv .venv
 source .venv/Scripts/activate     # путь venv в Windows (Git Bash)

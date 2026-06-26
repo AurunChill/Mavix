@@ -2,7 +2,7 @@
 # Общие параметры сборки и отправки на сервер.
 # ПОДСТАВЬТЕ свои значения (как минимум SERVER_IP).
 
-SERVER_IP="CHANGE_ME"                     # IP или домен VPS с MavixServer
+SERVER_IP="85.198.69.77"                     # IP или домен VPS с MavixServer
 SERVER_USER="root"                        # пользователь SSH
 SERVER_PREBUILT="/srv/mavix/MavixServer/prebuilt"   # куда класть готовые бинари десктопа
 SERVER_WHEELS="/srv/mavix/MavixServer/wheels/board" # куда класть wheels борта

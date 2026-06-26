@@ -5,7 +5,7 @@ REM Требования: Python 3.12 с галкой "Add Python to PATH".
 REM Если pip ругнётся "Microsoft Visual C++ 14.0 required" —
 REM поставить Microsoft C++ Build Tools.
 
-set SERVER_IP=85.198.102.188
+set SERVER_IP=85.198.69.77
 
 cd /d "%~dp0..\MavixDesktop-UI"
 
