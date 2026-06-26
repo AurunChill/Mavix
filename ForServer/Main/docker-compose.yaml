@@ -44,6 +44,8 @@ services:
     env_file: MavixWeb/.env
     expose:
       - "3001"
+    volumes:
+      - ./MavixWeb/public/downloads:/app/public/downloads:ro
     depends_on:
       - app
     restart: unless-stopped

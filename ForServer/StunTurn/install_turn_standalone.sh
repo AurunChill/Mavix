@@ -15,7 +15,7 @@ set -euo pipefail
 DOMAIN="turn.drone-mavix.ru"
 EMAIL="aurunchill@yandex.ru"           # для Let's Encrypt
 TURN_USER="myuser"
-TURN_PASS="BxBF+DZ0JZU6lK1MiSyj8oG/+gwKJeIF"
+TURN_PASS="changeme"
 REALM="drone-mavix.ru"
 # ==============================
 
