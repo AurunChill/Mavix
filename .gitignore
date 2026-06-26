@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Дампы БД, создаваемые ForServer/Main/change.sh при переключении веток
+ForServer/Main/dumps/
